@@ -1,0 +1,6 @@
+{
+  "extends": "@pastellink/tsconfig-base/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs"
+  }
+}

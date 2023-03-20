@@ -1,0 +1,9 @@
+{
+  "extends": "@pastellink/tsconfig-base/tsconfig",
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2015",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx"
+  }
+}

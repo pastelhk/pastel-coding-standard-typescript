@@ -1,0 +1,9 @@
+{
+  "name": "@pastellink/tsconfig-react",
+  "description": "TypeScript config for React applications",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": "pastellink/coding-standard-typescript.git",
+  "main": "tsconfig.json",
+  "prettier": "@pastellink/prettierrc"
+}

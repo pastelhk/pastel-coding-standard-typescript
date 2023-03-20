@@ -1,6 +1,42 @@
 {
   "folders": [
     {
+      "name": "⚙️ @pastellink/eslint-config-base",
+      "path": "packages/eslint-config-base"
+    },
+    {
+      "name": "⚙️ @pastellink/eslint-config-node",
+      "path": "packages/eslint-config-node"
+    },
+    {
+      "name": "⚙️ @pastellink/eslint-config-react",
+      "path": "packages/eslint-config-react"
+    },
+    {
+      "name": "⚙️ @pastellink/eslint-config-react-native",
+      "path": "packages/eslint-config-react-native"
+    },
+    {
+      "name": "⚙️ @pastellink/prettierrc",
+      "path": "packages/prettierrc"
+    },
+    {
+      "name": "⚙️ @pastellink/tsconfig-base",
+      "path": "packages/tsconfig-base"
+    },
+    {
+      "name": "⚙️ @pastellink/tsconfig-node",
+      "path": "packages/tsconfig-node"
+    },
+    {
+      "name": "⚙️ @pastellink/tsconfig-react",
+      "path": "packages/tsconfig-react"
+    },
+    {
+      "name": "⚙️ @pastellink/tsconfig-react-native",
+      "path": "packages/tsconfig-react-native"
+    },
+    {
       "name": "✨ coding-standard-typescript",
       "path": "."
     }
@@ -25,6 +61,7 @@
       "datetime",
       "dismissable",
       "dynatrace",
+      "hkelectric",
       "Intune",
       "MSAL",
       "upsert"
@@ -55,7 +92,7 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "typescript.tsdk": "✨ polyu-dip/node_modules/typescript/lib",
+    "typescript.tsdk": "✨ pastellink/node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "eslint.alwaysShowStatus": true,
     "eslint.validate": [
@@ -76,8 +113,7 @@
       "ghmcadams.lintlens",
       "esbenp.prettier-vscode",
       "mwpb.java-prettier-formatter",
-      "naco-siren.gradle-language",
-      "webben.browserslist"
+      "naco-siren.gradle-language"
     ]
   }
 }
