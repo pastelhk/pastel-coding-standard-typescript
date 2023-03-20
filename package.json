@@ -1,0 +1,27 @@
+{
+  "name": "@pastellink/coding-standard-typescript",
+  "version": "0.1.0",
+  "author": "PastelLink <info@pastellink.com>",
+  "license": "MIT",
+  "repository": "pastellink/coding-standard-typescript.git",
+  "homepage": "https://github.com/pastellink/coding-standard-typescript#readme",
+  "bugs": "https://github.com/pastellink/coding-standard-typescript/issues",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "ci:packages": "syncpack",
+    "ci:prettier-check": "prettier -c .",
+    "packages-fix": "syncpack format && syncpack fix-mismatches",
+    "postinstall": "patch-package",
+    "postversion": "npm run postversion --workspaces --if-present",
+    "publish": "lerna publish --conventional-commits --yes"
+  },
+  "prettier": "@pastellink/prettierrc",
+  "devDependencies": {
+    "lerna": "^6.5.1",
+    "patch-package": "^6.5.1",
+    "prettier": "^2.8.5",
+    "syncpack": "^9.8.4"
+  }
+}

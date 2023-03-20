@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+lerna.json
+ios/
+android/
+dist/
+patches/
+
+CHANGELOG.md
+
+**/lcov-report/*
+coverage-final.json

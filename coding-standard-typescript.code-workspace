@@ -1,0 +1,83 @@
+{
+  "folders": [
+    {
+      "name": "✨ coding-standard-typescript",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "conventionalCommits.scopes": [],
+    "files.exclude": {
+      "node_modules/": true,
+      ".eslintcache": true
+    },
+    "search.exclude": {
+      "node_modules/": true,
+      "**/yarn-error.log": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "cSpell.words": [
+      "adfs",
+      "apisauce",
+      "autosave",
+      "datamodels",
+      "datetime",
+      "dismissable",
+      "dynatrace",
+      "Intune",
+      "MSAL",
+      "upsert"
+    ],
+    "files.associations": {
+      "**/.azure/*.yml": "azure-pipelines"
+    },
+    "[java]": {
+      "editor.defaultFormatter": "mwpb.java-prettier-formatter",
+      "editor.tabSize": 2,
+      "editor.detectIndentation": false
+    },
+    "[javascript]": {
+      "editor.tabSize": 2,
+      "editor.detectIndentation": false
+    },
+    "[javascriptreact]": {
+      "editor.tabSize": 2,
+      "editor.detectIndentation": false
+    },
+    "[typescript]": {
+      "editor.tabSize": 2,
+      "editor.detectIndentation": false
+    },
+    "[typescriptreact]": {
+      "editor.tabSize": 2,
+      "editor.detectIndentation": false
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.tsdk": "✨ polyu-dip/node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "git.inputValidationLength": 72,
+    "git.inputValidationSubjectLength": 72
+  },
+  "extensions": {
+    "recommendations": [
+      "aaron-bond.better-comments",
+      "vivaxy.vscode-conventional-commits",
+      "editorconfig.editorconfig",
+      "dbaeumer.vscode-eslint",
+      "ghmcadams.lintlens",
+      "esbenp.prettier-vscode",
+      "mwpb.java-prettier-formatter",
+      "naco-siren.gradle-language",
+      "webben.browserslist"
+    ]
+  }
+}

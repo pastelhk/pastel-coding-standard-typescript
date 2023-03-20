@@ -1,0 +1,13 @@
+{
+  "packages": [
+    "packages/*",
+    "utilities/*"
+  ],
+  "version": "independent",
+  "command": {
+    "version": {
+      "message": "chore: publish"
+    }
+  },
+  "changelogPreset": "angular"
+}

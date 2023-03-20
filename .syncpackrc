@@ -1,0 +1,46 @@
+{
+  "dev": true,
+  "filter": ".",
+  "indent": "  ",
+  "overrides": true,
+  "peer": true,
+  "prod": true,
+  "resolutions": true,
+  "workspace": false,
+  "semverGroups": [],
+  "semverRange": "",
+  "sortAz": [
+    "contributors",
+    "dependencies",
+    "devDependencies",
+    "keywords",
+    "peerDependencies",
+    "scripts"
+  ],
+  "sortFirst": [
+    "name",
+    "description",
+    "version",
+    "author",
+    "license",
+    "repository",
+    "homepage",
+    "bugs",
+    "workspaces",
+    "scripts",
+    "main",
+    "module",
+    "types",
+    "files",
+    "eslintConfig",
+    "prettier",
+    "dependencies",
+    "peerDependencies",
+    "devDependencies"
+  ],
+  "source": [
+    "package.json",
+    "packages/*/package.json"
+  ],
+  "versionGroups": []
+}
