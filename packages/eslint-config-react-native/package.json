@@ -1,13 +1,13 @@
 {
   "name": "@pastellink/eslint-config-react-native",
   "description": "Eslint config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "repository": "pastellink/coding-standard-typescript.git",
   "main": ".eslintrc.js",
   "prettier": "@pastellink/prettierrc",
   "dependencies": {
-    "@pastellink/eslint-config-react": "0.1.0",
+    "@pastellink/eslint-config-react": "^0.1.1",
     "eslint-plugin-react-native": "^4.0.0"
   }
 }
