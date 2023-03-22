@@ -6,9 +6,6 @@
   "repository": "pastellink/coding-standard-typescript.git",
   "main": ".eslintrc.js",
   "prettier": "@pastellink/prettierrc",
-  "peerDependencies": {
-    "eslint": ">=8"
-  },
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -17,5 +14,8 @@
     "eslint-plugin-jest": "^27.2.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-node": "^11.1.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8"
   }
 }

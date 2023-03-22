@@ -5,5 +5,8 @@
   "license": "MIT",
   "repository": "pastellink/coding-standard-typescript.git",
   "main": "tsconfig.json",
-  "prettier": "@pastellink/prettierrc"
+  "prettier": "@pastellink/prettierrc",
+  "dependencies": {
+    "@pastellink/tsconfig-base": "0.1.0"
+  }
 }
