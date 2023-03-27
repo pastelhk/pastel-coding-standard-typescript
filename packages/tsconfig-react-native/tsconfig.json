@@ -2,7 +2,7 @@
   "extends": "@pastellink/tsconfig-react/tsconfig",
   "compilerOptions": {
     "module": "commonjs",
-    "types": ["react-native", "jest"],
+    "types": ["react-native"],
     "lib": ["es2019"],
     "jsx": "react-native"
   }
