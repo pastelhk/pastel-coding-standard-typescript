@@ -1,13 +1,14 @@
 module.exports = {
-  plugins: ['@typescript-eslint', 'jest'],
   parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
-    'plugin:import/typescript',
     'plugin:import/recommended',
+    'plugin:import/typescript',
     'airbnb-typescript/base',
     'prettier',
   ],
+  settings: { 'import/resolver': { typescript: true, node: true } },
   env: {
     'jest/globals': true,
   },
