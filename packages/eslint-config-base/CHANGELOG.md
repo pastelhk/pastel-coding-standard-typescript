@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/pastellink/coding-standard-typescript/compare/@pastellink/eslint-config-base@0.1.2...@pastellink/eslint-config-base@0.1.3) (2023-03-28)
+
+
+### Bug Fixes
+
+* **eslint-config:** remove jest ([11de05a](https://github.com/pastellink/coding-standard-typescript/commit/11de05ab9af90e04fd47fe14cd590c4983e87220))
+
+
+
+
+
 ## [0.1.2](https://github.com/pastellink/coding-standard-typescript/compare/@pastellink/eslint-config-base@0.1.1...@pastellink/eslint-config-base@0.1.2) (2023-03-28)
 
 
