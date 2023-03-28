@@ -9,9 +9,6 @@ module.exports = {
     'prettier',
   ],
   settings: { 'import/resolver': { typescript: true, node: true } },
-  env: {
-    'jest/globals': true,
-  },
   ignorePatterns: ['.eslintrc.js', 'coverage/*'],
   globals: {
     __DEV__: true,
