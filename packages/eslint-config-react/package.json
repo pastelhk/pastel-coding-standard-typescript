@@ -1,7 +1,7 @@
 {
   "name": "@pastellink/eslint-config-react",
   "description": "Eslint config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "repository": "pastellink/coding-standard-typescript.git",
   "main": ".eslintrc.js",

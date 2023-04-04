@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/pastellink/coding-standard-typescript/compare/@pastellink/eslint-config-react@0.1.3...@pastellink/eslint-config-react@0.1.4) (2023-04-04)
+
+
+### Bug Fixes
+
+* remove react component display name rule disable ([474f48a](https://github.com/pastellink/coding-standard-typescript/commit/474f48a488a3274f42a53c28897be3baf17403b7))
+
+
+
+
+
 ## [0.1.3](https://github.com/pastellink/coding-standard-typescript/compare/@pastellink/eslint-config-react@0.1.2...@pastellink/eslint-config-react@0.1.3) (2023-03-28)
 
 **Note:** Version bump only for package @pastellink/eslint-config-react
