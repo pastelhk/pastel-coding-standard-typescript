@@ -25,7 +25,6 @@ module.exports = {
       { ignoreClassFields: true },
     ],
     'react/jsx-props-no-spreading': ['warn'],
-    'react/display-name': 'off',
     'react/prop-types': 'off', // ? using typescript for type checking
     'react/self-closing-comp': 'error',
 
