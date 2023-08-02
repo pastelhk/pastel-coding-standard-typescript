@@ -63,6 +63,7 @@ module.exports = {
     ],
     'no-empty': ['error', { allowEmptyCatch: true }],
     'no-await-in-loop': 'warn',
+    'no-else-return': 'error',
 
     'node/global-require': 'off',
 
