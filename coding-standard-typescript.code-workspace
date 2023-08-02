@@ -1,39 +1,39 @@
 {
   "folders": [
     {
-      "name": "⚙️ @pastellink/eslint-config-base",
+      "name": "⚙️ @pasteltech/eslint-config-base",
       "path": "packages/eslint-config-base"
     },
     {
-      "name": "⚙️ @pastellink/eslint-config-node",
+      "name": "⚙️ @pasteltech/eslint-config-node",
       "path": "packages/eslint-config-node"
     },
     {
-      "name": "⚙️ @pastellink/eslint-config-react",
+      "name": "⚙️ @pasteltech/eslint-config-react",
       "path": "packages/eslint-config-react"
     },
     {
-      "name": "⚙️ @pastellink/eslint-config-react-native",
+      "name": "⚙️ @pasteltech/eslint-config-react-native",
       "path": "packages/eslint-config-react-native"
     },
     {
-      "name": "⚙️ @pastellink/prettierrc",
+      "name": "⚙️ @pasteltech/prettierrc",
       "path": "packages/prettierrc"
     },
     {
-      "name": "⚙️ @pastellink/tsconfig-base",
+      "name": "⚙️ @pasteltech/tsconfig-base",
       "path": "packages/tsconfig-base"
     },
     {
-      "name": "⚙️ @pastellink/tsconfig-node",
+      "name": "⚙️ @pasteltech/tsconfig-node",
       "path": "packages/tsconfig-node"
     },
     {
-      "name": "⚙️ @pastellink/tsconfig-react",
+      "name": "⚙️ @pasteltech/tsconfig-react",
       "path": "packages/tsconfig-react"
     },
     {
-      "name": "⚙️ @pastellink/tsconfig-react-native",
+      "name": "⚙️ @pasteltech/tsconfig-react-native",
       "path": "packages/tsconfig-react-native"
     },
     {
@@ -92,7 +92,7 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "typescript.tsdk": "✨ pastellink/node_modules/typescript/lib",
+    "typescript.tsdk": "✨ pasteltech/node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "eslint.alwaysShowStatus": true,
     "eslint.validate": [

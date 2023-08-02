@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@pastellink/eslint-config-react'],
+  extends: ['@pasteltech/eslint-config-react'],
   plugins: ['react-native'],
   settings: {
     react: {

@@ -1,12 +1,12 @@
 {
-  "name": "@pastellink/tsconfig-react",
+  "name": "@pasteltech/tsconfig-react",
   "description": "TypeScript config for React applications",
   "version": "0.1.1",
   "license": "MIT",
-  "repository": "pastellink/coding-standard-typescript.git",
+  "repository": "pasteltech/coding-standard-typescript.git",
   "main": "tsconfig.json",
-  "prettier": "@pastellink/prettierrc",
+  "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pastellink/tsconfig-base": "0.1.0"
+    "@pasteltech/tsconfig-base": "0.1.0"
   }
 }

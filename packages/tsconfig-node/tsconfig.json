@@ -1,5 +1,5 @@
 {
-  "extends": "@pastellink/tsconfig-base/tsconfig",
+  "extends": "@pasteltech/tsconfig-base/tsconfig",
   "compilerOptions": {
     "module": "commonjs"
   }

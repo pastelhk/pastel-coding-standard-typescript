@@ -8,4 +8,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add initial configurations ([fdb0d58](https://github.com/pastellink/coding-standard-typescript/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
+* add initial configurations ([fdb0d58](https://github.com/pasteltech/coding-standard-typescript/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))

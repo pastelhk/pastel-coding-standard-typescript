@@ -1,4 +1,4 @@
-# `@pastellink/prettierrc`
+# `@pasteltech/prettierrc`
 
 Prettier config
 
@@ -9,5 +9,5 @@ Prettier config
 2. Add the following line to `package.json` to use default settings
 
 ```
-  "prettier": "@pastellink/prettierrc",
+  "prettier": "@pasteltech/prettierrc",
 ```

@@ -1,11 +1,11 @@
 {
-  "name": "@pastellink/coding-standard-typescript",
+  "name": "@pasteltech/coding-standard-typescript",
   "version": "0.1.0",
-  "author": "PastelLink <info@pastellink.com>",
+  "author": "Pastel Tech <info@pastel.com.hk>",
   "license": "MIT",
-  "repository": "pastellink/coding-standard-typescript.git",
-  "homepage": "https://github.com/pastellink/coding-standard-typescript#readme",
-  "bugs": "https://github.com/pastellink/coding-standard-typescript/issues",
+  "repository": "pasteltech/coding-standard-typescript.git",
+  "homepage": "https://github.com/pasteltech/coding-standard-typescript#readme",
+  "bugs": "https://github.com/pasteltech/coding-standard-typescript/issues",
   "workspaces": [
     "packages/*"
   ],
@@ -17,7 +17,7 @@
     "postversion": "npm run postversion --workspaces --if-present",
     "publish": "lerna publish --conventional-commits --yes"
   },
-  "prettier": "@pastellink/prettierrc",
+  "prettier": "@pasteltech/prettierrc",
   "devDependencies": {
     "lerna": "^6.5.1",
     "patch-package": "^6.5.1",

@@ -1,9 +1,9 @@
 {
-  "name": "@pastellink/prettierrc",
+  "name": "@pasteltech/prettierrc",
   "description": "Prettier config",
   "version": "0.1.0",
   "license": "MIT",
-  "repository": "pastellink/coding-standard-typescript.git",
+  "repository": "pasteltech/coding-standard-typescript.git",
   "main": "prettierrc.js",
   "prettier": "./prettierrc.js"
 }

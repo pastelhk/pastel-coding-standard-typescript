@@ -1,5 +1,5 @@
 {
-  "extends": "@pastellink/tsconfig-react/tsconfig",
+  "extends": "@pasteltech/tsconfig-react/tsconfig",
   "compilerOptions": {
     "module": "commonjs",
     "types": ["react-native"],

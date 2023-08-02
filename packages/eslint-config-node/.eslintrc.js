@@ -1,3 +1,3 @@
 module.exports = {
-  extends: '@pastellink/eslint-config-base',
+  extends: '@pasteltech/eslint-config-base',
 }

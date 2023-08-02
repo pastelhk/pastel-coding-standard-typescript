@@ -3,7 +3,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'airbnb-typescript',
-    '@pastellink/eslint-config-base',
+    '@pasteltech/eslint-config-base',
   ],
   plugins: ['react', 'react-hooks'],
   settings: {
