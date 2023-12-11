@@ -56,7 +56,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'no-nested-ternary': 'warn',
-    'class-methods-use-this': 'warn',
+    'class-methods-use-this': 'off',
     'no-param-reassign': [
       'error',
       { props: true, ignorePropertyModificationsFor: ['self'] },
