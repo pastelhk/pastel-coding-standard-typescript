@@ -30,5 +30,13 @@ module.exports = {
 
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: "MemberExpression[property.name='at']",
+        message: 'Use bracket notation',
+      },
+    ],
   },
 }
