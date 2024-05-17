@@ -32,7 +32,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
 
     'no-restricted-syntax': [
-      'warn',
+      'error',
       {
         selector: "MemberExpression[property.name='at']",
         message: '.at is not available in older version of browsers. Use bracket notation instead',
