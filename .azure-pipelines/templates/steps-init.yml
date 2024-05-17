@@ -33,6 +33,7 @@ steps:
 
   - ${{ if eq(parameters.enableNodeCache, 'true') }}:
       - task: Cache@2
+        condition: eq(variables['Environment.Name'], '')
         inputs:
           key: nodejs | $(Agent.OS) | .nvmrc
           path: ${{ parameters.nodeRuntimeDirectory }}
@@ -56,6 +57,7 @@ steps:
   - ${{ if ne(parameters.skipNpmInstall, 'true' )}}:
       - ${{ if eq(parameters.enableCache, 'true') }}:
           - task: Cache@2
+            condition: eq(variables['Environment.Name'], '')
             inputs:
               key: node_modules | $(Agent.OS) | .nvmrc | package-lock.json | patches/**
               path: $(System.DefaultWorkingDirectory)/node_modules
