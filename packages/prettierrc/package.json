@@ -1,7 +1,7 @@
 {
   "name": "@pasteltech/prettierrc",
   "description": "Prettier config",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "license": "MIT",
   "repository": "pasteltech/coding-standard-typescript.git",
   "main": "prettierrc.js",

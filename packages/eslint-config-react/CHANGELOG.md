@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/pasteltech/coding-standard-typescript/compare/v0.5.0...v0.6.0) (2024-05-17)
+
+
+### Features
+
+* forbid at function in react ([#2](https://github.com/pasteltech/coding-standard-typescript/issues/2)) ([9b5159f](https://github.com/pasteltech/coding-standard-typescript/commit/9b5159f451159fc0da7dd10130d3714555768cf9))
+* update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/coding-standard-typescript/commit/c477663063c38160d665045c148122fd80e169ac))
+
+
+
+
+
 # 0.5.0 (2024-05-17)
 
 
