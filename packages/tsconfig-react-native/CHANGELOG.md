@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-05-17)
+
+
+### Bug Fixes
+
+* **tsconfig:** remove jest from tsconfig for react native ([6cf9b91](https://github.com/pasteltech/coding-standard-typescript/commit/6cf9b9145c22b12b4f14728a0ba1797bd1204c8b))
+
+
+### Features
+
+* add initial configurations ([fdb0d58](https://github.com/pasteltech/coding-standard-typescript/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
+
+
+
+
+
 # 0.2.0 (2023-08-02)
 
 
