@@ -35,7 +35,7 @@ module.exports = {
       'warn',
       {
         selector: "MemberExpression[property.name='at']",
-        message: 'Use bracket notation',
+        message: '.at is not available in older version of browsers. Use bracket notation instead',
       },
     ],
   },
