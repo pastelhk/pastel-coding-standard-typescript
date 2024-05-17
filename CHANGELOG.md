@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/pasteltech/coding-standard-typescript/compare/v0.6.0...v0.6.1) (2024-05-17)
+
+
+### Bug Fixes
+
+* **ci:** disable caching when deploying ([34a5631](https://github.com/pasteltech/coding-standard-typescript/commit/34a5631af737c32ecfb223e2b02c65932f2f3dbd))
+* **tsconfig:** remove conflicting flag ([4aa9b95](https://github.com/pasteltech/coding-standard-typescript/commit/4aa9b955d42548e3c0f89228b8690f4d6fb751a1))
+
+
+
+
+
 # [0.6.0](https://github.com/pasteltech/coding-standard-typescript/compare/v0.5.0...v0.6.0) (2024-05-17)
 
 

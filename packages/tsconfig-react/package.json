@@ -1,7 +1,7 @@
 {
   "name": "@pasteltech/tsconfig-react",
   "description": "TypeScript config for React applications",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "license": "MIT",
   "repository": "pasteltech/coding-standard-typescript.git",
   "main": "tsconfig.json",
