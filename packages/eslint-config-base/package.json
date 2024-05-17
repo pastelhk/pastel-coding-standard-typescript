@@ -1,7 +1,7 @@
 {
   "name": "@pasteltech/eslint-config-base",
   "description": "Eslint config",
-  "version": "0.6.2",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": "pasteltech/coding-standard-typescript.git",
   "main": ".eslintrc.js",

@@ -1,12 +1,12 @@
 {
   "name": "@pasteltech/tsconfig-react-native",
   "description": "TypeScript config for React applications",
-  "version": "0.6.1",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": "pasteltech/coding-standard-typescript.git",
   "main": "tsconfig.json",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/tsconfig-react": "^0.6.1"
+    "@pasteltech/tsconfig-react": "^1.0.0"
   }
 }

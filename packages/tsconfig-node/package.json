@@ -1,12 +1,12 @@
 {
   "name": "@pasteltech/tsconfig-node",
   "description": "TypeScript config for Node.js applications",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": "pasteltech/coding-standard-typescript.git",
   "main": "tsconfig.json",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/tsconfig-base": "^0.6.0"
+    "@pasteltech/tsconfig-base": "^1.0.0"
   }
 }
