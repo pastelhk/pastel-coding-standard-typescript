@@ -1,0 +1,71 @@
+parameters:
+  - name: enableCache
+    type: boolean
+    default: false
+  - name: enableNodeCache
+    type: boolean
+    default: true
+  - name: nodeRuntimeDirectory
+    type: string
+    default: /opt/hostedtoolcache/node
+  - name: skipNpmInstall
+    type: boolean
+    default: false
+
+steps:
+  - task: npmAuthenticate@0
+    displayName: Npm Authenticate
+    inputs:
+      workingFile: .npmrc
+      customEndpoint: $(npmServiceConnection)
+    condition: ne(variables['npmServiceConnection'], '')
+
+  - script: |
+      echo "##vso[task.setvariable variable=node_version]$(cat .nvmrc)"
+    displayName: Retrieve nvm version (*nix / mac)
+    condition: ne( variables['Agent.OS'], 'Windows_NT' )
+
+  - powershell: |
+      $nodeVersion = Get-Content .nvmrc
+      Write-Host "##vso[task.setvariable variable=node_version]$nodeVersion"
+    displayName: Retrieve nvm version (Windows)
+    condition: eq( variables['Agent.OS'], 'Windows_NT' )
+
+  - ${{ if eq(parameters.enableNodeCache, 'true') }}:
+      - task: Cache@2
+        inputs:
+          key: nodejs | $(Agent.OS) | .nvmrc
+          path: ${{ parameters.nodeRuntimeDirectory }}
+          cacheHitVar: NODEJS_RUNTIME_CACHE_HIT
+        displayName: Cache Node.js runtime
+
+      - script: |
+          export PATH=${PATH}:${{ parameters.nodeRuntimeDirectory }}/$(node_version)/x64/bin
+        condition: and(succeeded(), ne(variables.NODEJS_RUNTIME_CACHE_HIT, 'false'))
+        displayName: Prepend Node.js runtime to PATH
+
+  - task: NodeTool@0
+    condition: and(succeeded(), ne(variables.NODEJS_RUNTIME_CACHE_HIT, 'true'))
+    inputs:
+      versionSpec: $(node_version)
+    displayName: Install Node
+    # Known issue on random failure in installing nodejs due to network issue
+    # https://github.com/microsoft/azure-pipelines-tasks/issues/18280
+    retryCountOnTaskFailure: 3
+
+  - ${{ if ne(parameters.skipNpmInstall, 'true' )}}:
+      - ${{ if eq(parameters.enableCache, 'true') }}:
+          - task: Cache@2
+            inputs:
+              key: node_modules | $(Agent.OS) | .nvmrc | package-lock.json | patches/**
+              path: $(System.DefaultWorkingDirectory)/node_modules
+              cacheHitVar: NODE_MODULES_RUNTIME_CACHE_HIT
+            displayName: Cache node_modules
+
+          - script: npm run --workspaces --if-present postinstall
+            condition: and(succeeded(), ne(variables.NODE_MODULES_RUNTIME_CACHE_HIT, 'false'))
+            displayName: Perform postinstall on npm packages
+
+      - script: npm cache clean --force && npm ci
+        condition: and(succeeded(), ne(variables.NODE_MODULES_RUNTIME_CACHE_HIT, 'true'))
+        displayName: Install npm packages

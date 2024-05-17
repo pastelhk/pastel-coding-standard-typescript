@@ -1,0 +1,70 @@
+parameters:
+  - name: projectDirectory
+    type: string
+    default: .
+  - name: outputDirectory
+    type: string
+  - name: npmScript
+    type: string
+    default: build
+  - name: includeNodeModules
+    type: boolean
+    default: false
+  - name: packageJsonSourcePath
+    type: string
+    default: ''
+  - name: artifactName
+    type: string
+
+steps:
+  - script: npm run ${{ parameters.npmScript }}
+    displayName: Execute ${{ parameters.npmScript }}
+    workingDirectory: ${{ parameters.projectDirectory }}
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: ${{ parameters.outputDirectory }}
+      contents: '**'
+      targetFolder: $(Build.ArtifactStagingDirectory)/content
+    displayName: Copy files to staging directory
+
+  - ${{ if eq(parameters.includeNodeModules, 'true' )}}:
+      - script: rm -rf $(Build.SourcesDirectory)/node_modules
+        displayName: Clean node_modules (*nix / mac)
+        condition: ne( variables['Agent.OS'], 'Windows_NT' )
+
+      - powershell: Remove-Item -Recurse -Force $(Build.SourcesDirectory)/node_modules
+        displayName: Clean node_modules (Windows)
+        condition: eq( variables['Agent.OS'], 'Windows_NT' )
+
+      - script: npm ci
+        displayName: Install production dependencies
+        env:
+          NODE_ENV: production
+
+      - task: CopyFiles@2
+        inputs:
+          sourceFolder: $(Build.SourcesDirectory)/node_modules
+          contents: '**'
+          targetFolder: $(Build.ArtifactStagingDirectory)/content/node_modules
+        displayName: Copy node_modules to staging directory
+
+  - ${{ if ne(parameters.packageJsonSourcePath, '' )}}:
+      - task: CopyFiles@2
+        inputs:
+          contents: ${{ parameters.packageJsonSourcePath }}
+          targetFolder: $(Build.ArtifactStagingDirectory)/content/
+        displayName: Copy package.json to staging directory
+
+  - task: ArchiveFiles@2
+    inputs:
+      includeRootFolder: false
+      rootFolderOrFile: $(Build.ArtifactStagingDirectory)/content/
+      archiveType: zip
+      archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.DefinitionName)_$(Build.BuildNumber).zip
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: $(Build.ArtifactStagingDirectory)/$(Build.DefinitionName)_$(Build.BuildNumber).zip
+      artifactName: ${{ parameters.artifactName }}
+    displayName: Publish artifact
