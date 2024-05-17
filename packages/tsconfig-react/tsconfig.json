@@ -8,7 +8,6 @@
 
     "jsx": "react-jsx",
 
-    "allowImportingTsExtensions": true,
     "composite": true,
     "declarationMap": true
   },

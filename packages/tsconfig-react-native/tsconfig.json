@@ -22,7 +22,6 @@
     "customConditions": ["react-native"],
     "jsx": "react-native",
 
-    "allowImportingTsExtensions": true,
     "allowArbitraryExtensions": true,
     "resolvePackageJsonImports": false
   }
