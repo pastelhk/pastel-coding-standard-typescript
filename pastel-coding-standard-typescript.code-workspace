@@ -2,54 +2,55 @@
   "folders": [
     {
       "name": "⚙️ @pasteltech/eslint-config-base",
-      "path": "packages/eslint-config-base"
+      "path": "packages/eslint-config-base",
     },
     {
       "name": "⚙️ @pasteltech/eslint-config-node",
-      "path": "packages/eslint-config-node"
+      "path": "packages/eslint-config-node",
     },
     {
       "name": "⚙️ @pasteltech/eslint-config-react",
-      "path": "packages/eslint-config-react"
+      "path": "packages/eslint-config-react",
     },
     {
       "name": "⚙️ @pasteltech/eslint-config-react-native",
-      "path": "packages/eslint-config-react-native"
+      "path": "packages/eslint-config-react-native",
     },
     {
       "name": "⚙️ @pasteltech/prettierrc",
-      "path": "packages/prettierrc"
+      "path": "packages/prettierrc",
     },
     {
       "name": "⚙️ @pasteltech/tsconfig-base",
-      "path": "packages/tsconfig-base"
+      "path": "packages/tsconfig-base",
     },
     {
       "name": "⚙️ @pasteltech/tsconfig-node",
-      "path": "packages/tsconfig-node"
+      "path": "packages/tsconfig-node",
     },
     {
       "name": "⚙️ @pasteltech/tsconfig-react",
-      "path": "packages/tsconfig-react"
+      "path": "packages/tsconfig-react",
     },
     {
       "name": "⚙️ @pasteltech/tsconfig-react-native",
-      "path": "packages/tsconfig-react-native"
+      "path": "packages/tsconfig-react-native",
     },
     {
-      "name": "✨ coding-standard-typescript",
-      "path": "."
-    }
+      "name": "✨ @pasteltech/coding-standard-typescript",
+      "path": ".",
+    },
   ],
   "settings": {
     "conventionalCommits.scopes": [],
     "files.exclude": {
       "node_modules/": true,
-      ".eslintcache": true
     },
     "search.exclude": {
       "node_modules/": true,
-      "**/yarn-error.log": true
+      "**/yarn-error.log": true,
+      "**/dist": true,
+      ".eslintcache": true,
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -61,48 +62,58 @@
       "datetime",
       "dismissable",
       "dynatrace",
-      "hkelectric",
       "Intune",
       "MSAL",
-      "upsert"
+      "oidc",
+      "upsert",
     ],
     "files.associations": {
-      "**/.azure/*.yml": "azure-pipelines"
+      "**/.azure/*.yml": "azure-pipelines",
     },
     "[java]": {
       "editor.defaultFormatter": "mwpb.java-prettier-formatter",
       "editor.tabSize": 2,
-      "editor.detectIndentation": false
+      "editor.detectIndentation": false,
     },
     "[javascript]": {
       "editor.tabSize": 2,
-      "editor.detectIndentation": false
+      "editor.detectIndentation": false,
     },
     "[javascriptreact]": {
       "editor.tabSize": 2,
-      "editor.detectIndentation": false
+      "editor.detectIndentation": false,
     },
     "[typescript]": {
       "editor.tabSize": 2,
-      "editor.detectIndentation": false
+      "editor.detectIndentation": false,
     },
     "[typescriptreact]": {
       "editor.tabSize": 2,
-      "editor.detectIndentation": false
+      "editor.detectIndentation": false,
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "typescript.tsdk": "✨ pasteltech/node_modules/typescript/lib",
+    "typescript.tsdk": "✨ pasteltech/coding-standard-typescript/node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.preferences.importModuleSpecifier": "relative",
     "eslint.alwaysShowStatus": true,
     "eslint.validate": [
       "javascript",
       "javascriptreact",
       "typescript",
-      "typescriptreact"
+      "typescriptreact",
     ],
     "git.inputValidationLength": 72,
-    "git.inputValidationSubjectLength": 72
+    "git.inputValidationSubjectLength": 72,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+    },
+    "[terraform]": {
+      "editor.defaultFormatter": "hashicorp.terraform",
+    },
+    "[terraform-vars]": {
+      "editor.defaultFormatter": "hashicorp.terraform",
+    },
   },
   "extensions": {
     "recommendations": [
@@ -113,7 +124,6 @@
       "ghmcadams.lintlens",
       "esbenp.prettier-vscode",
       "mwpb.java-prettier-formatter",
-      "naco-siren.gradle-language"
-    ]
-  }
+    ],
+  },
 }

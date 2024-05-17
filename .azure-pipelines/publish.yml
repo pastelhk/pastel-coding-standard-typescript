@@ -1,0 +1,42 @@
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  - group: Pastel Toolbox - NPM Environment
+
+parameters:
+  - name: args
+    type: string
+    default: ' '
+
+trigger: none
+pr: none
+
+jobs:
+  - deployment: Publish
+    environment: $(npmEnvironment)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            - checkout: self
+              persistCredentials: true
+              fetchDepth: 0
+
+            - script: |
+                git config --global user.email ""
+                git config --global user.name "azure-pipelines"
+              displayName: Set git profile
+
+            - script: git checkout `echo $(Build.SourceBranch) | cut -d'/' -f3-`
+              displayName: Checkout branch
+
+            - template: ../.azure-pipelines/templates/steps-init.yml
+              parameters:
+                enableCache: false
+
+            - script: git update-index --assume-unchanged .npmrc
+              displayName: Ignore changes after authentication
+
+            - script: npm run publish ${{ parameters.args }}
+              displayName: Bump version and publish changed packages

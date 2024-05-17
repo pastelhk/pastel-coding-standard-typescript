@@ -1,0 +1,33 @@
+## Variables required
+##
+## sonarqubeServiceConnection Name of the service endpoint
+
+parameters:
+  - name: configFile
+    displayName: Path of SonarQube config file
+    type: string
+    default: ./sonar-project.properties
+
+steps:
+  - script: echo "##vso[task.setvariable variable=version;isoutput=true]$(git rev-parse --short HEAD)"
+    name: setVersion
+    condition: ne(variables['sonarProjectKey'], '')
+
+  - task: SonarQubePrepare@5
+    inputs:
+      SonarQube: $(sonarqubeServiceConnection)
+      scannerMode: CLI
+      configMode: file
+      configFile: ${{ parameters.configFile }}
+      extraProperties: |
+        sonar.projectKey=$(sonarProjectKey)
+        sonar.projectVersion=$(setVersion.version)
+    condition: ne(variables['sonarProjectKey'], '')
+
+  - task: SonarQubeAnalyze@5
+    condition: ne(variables['sonarProjectKey'], '')
+
+  - task: SonarQubePublish@5
+    inputs:
+      pollingTimeoutSec: '300'
+    condition: ne(variables['sonarProjectKey'], '')

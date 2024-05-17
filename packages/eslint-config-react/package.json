@@ -8,7 +8,7 @@
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
     "@pasteltech/eslint-config-base": "^0.3.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2"
   }
 }

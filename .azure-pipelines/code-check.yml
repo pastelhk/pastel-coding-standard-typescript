@@ -1,0 +1,69 @@
+pool:
+  vmImage: ubuntu-latest
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - develop
+      - '*/develop'
+      - master
+      - staging
+
+variables:
+  - group: Pastel Toolbox - NPM Environment
+  - group: Pastel Toolbox - TypeScript Coding Standard - SonarQube
+
+steps:
+  - template: ../.azure-pipelines/templates/steps-init.yml
+    parameters:
+      enableCache: false
+
+  - script: npm audit --omit=dev
+    displayName: Npm audit
+    continueOnError: true
+
+  - script: npm run check:packages
+    displayName: Package version align check
+    condition: succeededOrFailed()
+
+  - script: npm run check:format
+    displayName: Format check
+    condition: succeededOrFailed()
+
+  - script: npm run check:types
+    displayName: TypeScript check
+    condition: succeededOrFailed()
+
+  - script: npm run check:lint
+    displayName: Lint
+    condition: succeededOrFailed()
+
+  - task: PublishTestResults@2
+    displayName: Publish Lint Result
+    condition: succeededOrFailed()
+    inputs:
+      testRunner: JUnit
+      testResultsFiles: '**/lint-results/**/*.xml'
+      testRunTitle: Lint
+
+  - script: npm run check:test
+    displayName: Test
+    condition: succeededOrFailed()
+
+  - task: PublishTestResults@2
+    displayName: Publish Test Result
+    condition: succeededOrFailed()
+    inputs:
+      testRunner: JUnit
+      testResultsFiles: '**/jest-results/**/*.xml'
+      testRunTitle: Test
+
+  - task: PublishCodeCoverageResults@1
+    displayName: Publish Test Coverage
+    condition: succeededOrFailed()
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: '**/coverage/cobertura-coverage.xml'
+
+  - template: ../.azure-pipelines/templates/steps-sonarqube.yml
