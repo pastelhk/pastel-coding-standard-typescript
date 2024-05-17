@@ -3,7 +3,7 @@
     "packages/*",
     "utilities/*"
   ],
-  "version": "0.6.1",
+  "version": "0.6.2",
   "command": {
     "version": {
       "message": "chore: publish %s"

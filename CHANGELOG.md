@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/pasteltech/coding-standard-typescript/compare/v0.6.1...v0.6.2) (2024-05-17)
+
+
+### Bug Fixes
+
+* **eslint-config-base:** correct invalid pattern on eslint extraneous dependencies rule ([#3](https://github.com/pasteltech/coding-standard-typescript/issues/3)) ([a94d8ae](https://github.com/pasteltech/coding-standard-typescript/commit/a94d8aefd4e2c86a5ce67578ee5d847a478230b9))
+
+
+
+
+
 ## [0.6.1](https://github.com/pasteltech/coding-standard-typescript/compare/v0.6.0...v0.6.1) (2024-05-17)
 
 
