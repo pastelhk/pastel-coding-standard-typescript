@@ -1,4 +1,5 @@
 module.exports = {
+  env: { browser: true, es2020: true },
   extends: [
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
@@ -31,11 +32,14 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
 
+    'react/display-name': 'error',
+
     'no-restricted-syntax': [
       'error',
       {
         selector: "MemberExpression[property.name='at']",
-        message: '.at is not available in older version of browsers. Use bracket notation instead',
+        message:
+          '.at is not available in older version of browsers. Use bracket notation instead',
       },
     ],
   },

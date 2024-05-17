@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   extends: [
@@ -9,7 +10,16 @@ module.exports = {
     'prettier',
   ],
   settings: { 'import/resolver': { typescript: true, node: true } },
-  ignorePatterns: ['.eslintrc.js', 'coverage/*'],
+  ignorePatterns: [
+    'dist',
+    'node_modules',
+    '.eslintrc.js',
+    'coverage/*',
+    'vite.config.ts',
+    'webpack.config.js',
+    'babel.config.js',
+    'metro.config.js',
+  ],
   globals: {
     __DEV__: true,
     __dirname: false,
@@ -128,12 +138,33 @@ module.exports = {
     'import/no-anonymous-default-export': 'warn',
     'import/no-internal-modules': [
       'warn',
-      { allow: ['styled-components/native'] },
+      {
+        allow: [
+          'styled-components/native',
+          'react-dom/*',
+          'firebase-admin/*',
+          'react-dom/*',
+          '@mui/*',
+          '@mui/*/*',
+        ],
+      },
     ],
     'import/no-self-import': 'error',
     'import/namespace': 'off',
 
     // ? ignore as computation expensive. Turn it on when resolving cyclic dependency issues
     'import/no-cycle': ['error', { maxDepth: 3 }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/*.test.*',
+          '**/setup-tests.ts',
+          '**/*.spec.*',
+          'error',
+          { devDependencies: true },
+        ],
+      },
+    ],
   },
 }

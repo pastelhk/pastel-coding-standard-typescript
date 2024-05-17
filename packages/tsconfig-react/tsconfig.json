@@ -1,9 +1,16 @@
 {
   "extends": "@pasteltech/tsconfig-base/tsconfig",
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es2015",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx"
-  }
+    "module": "ESNext",
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "moduleResolution": "bundler",
+
+    "jsx": "react-jsx",
+
+    "allowImportingTsExtensions": true,
+    "composite": true,
+    "declarationMap": true
+  },
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

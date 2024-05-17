@@ -19,5 +19,27 @@ module.exports = {
     ],
     'react-native/no-raw-text': 'warn',
     'react-native/no-color-literals': 'warn',
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: 'styled-components',
+            importNames: ['default', 'styled'],
+            message: 'Use styled from styled-components/native ',
+          },
+          {
+            name: 'react-native-gesture-handler',
+            importNames: ['TouchableOpacity', 'TouchableHighlight', 'FlatList'],
+            message: 'Avoid using Touchables from react-native-gesture-handler',
+          },
+          {
+            name: 'react-i18next',
+            importNames: ['useTranslation'],
+            message: 'Use useTranslation from @pastellink/i18n-react ',
+          },
+        ],
+      },
+    ],
   },
 }
