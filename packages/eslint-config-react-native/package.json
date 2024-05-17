@@ -8,6 +8,6 @@
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
     "@pasteltech/eslint-config-react": "^0.3.0",
-    "eslint-plugin-react-native": "^4.0.0"
+    "eslint-plugin-react-native": "^4.1.0"
   }
 }
