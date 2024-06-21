@@ -112,6 +112,7 @@ module.exports = {
       {
         selector: 'parameter',
         format: ['camelCase'],
+        leadingUnderscore: 'allow',
       },
       {
         selector: 'parameter',
@@ -127,6 +128,7 @@ module.exports = {
         selector: 'memberLike',
         modifiers: ['private'],
         format: ['camelCase'],
+        leadingUnderscore: 'allow',
       },
       {
         selector: 'typeLike',
