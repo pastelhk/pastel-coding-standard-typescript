@@ -13,7 +13,7 @@ steps:
     name: setVersion
     condition: ne(variables['sonarProjectKey'], '')
 
-  - task: SonarQubePrepare@5
+  - task: SonarQubePrepare@6
     inputs:
       SonarQube: $(sonarqubeServiceConnection)
       scannerMode: CLI
@@ -24,10 +24,10 @@ steps:
         sonar.projectVersion=$(setVersion.version)
     condition: ne(variables['sonarProjectKey'], '')
 
-  - task: SonarQubeAnalyze@5
+  - task: SonarQubeAnalyze@6
     condition: ne(variables['sonarProjectKey'], '')
 
-  - task: SonarQubePublish@5
+  - task: SonarQubePublish@6
     inputs:
       pollingTimeoutSec: '300'
     condition: ne(variables['sonarProjectKey'], '')
