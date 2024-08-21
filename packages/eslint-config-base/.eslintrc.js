@@ -64,7 +64,7 @@ module.exports = {
     XMLHttpRequest: false,
   },
   rules: {
-    'no-console': 'off',
+    'no-console': 'error',
     'no-nested-ternary': 'warn',
     'class-methods-use-this': 'off',
     'no-param-reassign': [
