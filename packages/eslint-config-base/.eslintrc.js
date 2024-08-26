@@ -92,41 +92,66 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-member-accessibility': 'warn',
     '@typescript-eslint/naming-convention': [
-      'warn',
+      'error',
       {
         selector: 'default',
         format: ['camelCase'],
       },
       {
-        selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+        selector: ['accessor'],
+        format: ['camelCase'],
       },
       {
-        selector: 'function',
+        selector: ['variableLike', 'memberLike', 'method'],
         format: ['camelCase', 'PascalCase'],
+      },
+      {
+        selector: ['variableLike', 'memberLike', 'method'],
+        modifiers: ['const'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
         selector: 'parameter',
         format: ['camelCase'],
+        leadingUnderscore: 'allow',
       },
       {
         selector: 'parameter',
-        format: ['PascalCase'],
-        suffix: ['Component'],
+        format: ['camelCase', 'PascalCase'],
+        filter: {
+          regex: 'Component$',
+          match: true,
+        },
+        leadingUnderscore: 'allow',
       },
       {
-        selector: 'property',
-        format: ['camelCase', 'snake_case', 'PascalCase'],
-        leadingUnderscore: 'allow',
+        selector: 'typeLike',
+        format: ['PascalCase'],
       },
       {
         selector: 'memberLike',
         modifiers: ['private'],
         format: ['camelCase'],
+        leadingUnderscore: 'allow',
       },
       {
-        selector: 'typeLike',
-        format: ['PascalCase'],
+        selector: 'import',
+        format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
+      },
+      {
+        selector: 'import',
+        modifiers: ['default'],
+        format: ['camelCase', 'PascalCase'],
+      },
+      // allow lodash import
+      {
+        selector: 'import',
+        modifiers: ['default'],
+        filter: {
+          regex: '^_$',
+          match: true,
+        },
+        format: [],
       },
     ],
     '@typescript-eslint/no-var-requires': 'warn',
