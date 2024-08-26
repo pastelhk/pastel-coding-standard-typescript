@@ -153,6 +153,11 @@ module.exports = {
         },
         format: [],
       },
+      {
+        selector: 'enumMember',
+        format: ['camelCase', 'PascalCase'],
+        leadingUnderscore: 'allow',
+      },
     ],
     '@typescript-eslint/no-var-requires': 'warn',
     '@typescript-eslint/prefer-optional-chain': ['error'],
