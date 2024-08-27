@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.0...v1.0.1) (2024-08-27)
+
+
+### Bug Fixes
+
+* **eslint:** forbid console statement ([#7](https://github.com/pasteltech/coding-standard-typescript/issues/7)) ([2d262c1](https://github.com/pasteltech/coding-standard-typescript/commit/2d262c178420da3a061d41df2c4bc67973bfa161))
+* **eslint:** relax naming convention ([#5](https://github.com/pasteltech/coding-standard-typescript/issues/5)) ([9218e85](https://github.com/pasteltech/coding-standard-typescript/commit/9218e85d251eac2b69c87e9219794cedbb3e091c))
+
+
+### Features
+
+* **eslint:** allow unused underscore ([#6](https://github.com/pasteltech/coding-standard-typescript/issues/6)) ([7aa8b5a](https://github.com/pasteltech/coding-standard-typescript/commit/7aa8b5a5e07184b4087958a8a0af2ca70c0c6ade))
+
+
+
+
+
 # [1.0.0](https://github.com/pasteltech/coding-standard-typescript/compare/v0.6.2...v1.0.0) (2024-05-17)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-base
