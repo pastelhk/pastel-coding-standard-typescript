@@ -1,0 +1,11 @@
+{
+  "extends": "@pasteltech/tsconfig-react/tsconfig",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  }
+}

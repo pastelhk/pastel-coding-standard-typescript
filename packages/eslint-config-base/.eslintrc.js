@@ -154,7 +154,7 @@ module.exports = {
         format: [],
       },
     ],
-    '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/no-var-requires': ['error'],
     '@typescript-eslint/prefer-optional-chain': ['error'],
     '@typescript-eslint/prefer-nullish-coalescing': ['error'],
     '@typescript-eslint/no-unused-vars': [
