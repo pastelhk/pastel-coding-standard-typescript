@@ -1,0 +1,13 @@
+{
+  "name": "@pasteltech/eslint-config-nextjs",
+  "description": "Eslint config",
+  "version": "1.0.1",
+  "license": "MIT",
+  "repository": "pasteltech/coding-standard-typescript.git",
+  "main": ".eslintrc.js",
+  "prettier": "@pasteltech/prettierrc",
+  "dependencies": {
+    "@pasteltech/eslint-config-react": "^1.0.1",
+    "eslint-config-next": "^14.2.9"
+  }
+}

@@ -13,6 +13,10 @@
       "path": "packages/eslint-config-react",
     },
     {
+      "name": "⚙️ @pasteltech/eslint-config-nextjs",
+      "path": "packages/eslint-config-nextjs",
+    },
+    {
       "name": "⚙️ @pasteltech/eslint-config-react-native",
       "path": "packages/eslint-config-react-native",
     },
@@ -31,6 +35,10 @@
     {
       "name": "⚙️ @pasteltech/tsconfig-react",
       "path": "packages/tsconfig-react",
+    },
+    {
+      "name": "⚙️ @pasteltech/tsconfig-nextjs",
+      "path": "packages/tsconfig-nextjs",
     },
     {
       "name": "⚙️ @pasteltech/tsconfig-react-native",
