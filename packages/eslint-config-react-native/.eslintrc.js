@@ -8,8 +8,13 @@ module.exports = {
     },
   },
   rules: {
+    'import/no-internal-modules': [
+      'error',
+      { allow: ['styled-components/native'] },
+    ],
+
     'react-native/no-inline-styles': 'error',
-    'react-native/no-single-element-style-arrays': 'warn',
+    'react-native/no-single-element-style-arrays': 'error',
     'react-native/split-platform-components': [
       'error',
       {
@@ -17,8 +22,8 @@ module.exports = {
         iosPathRegex: '\\.ios.(js|jsx|ts|tsx)$',
       },
     ],
-    'react-native/no-raw-text': 'warn',
-    'react-native/no-color-literals': 'warn',
+    'react-native/no-raw-text': 'error',
+    'react-native/no-color-literals': 'error',
     'no-restricted-imports': [
       'error',
       {

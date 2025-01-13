@@ -1,11 +1,11 @@
 module.exports = {
-  env: { browser: true, es2020: true },
   extends: [
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'airbnb-typescript',
     '@pasteltech/eslint-config-base',
   ],
+  env: { browser: true, es2020: true },
   plugins: ['react', 'react-hooks'],
   settings: {
     react: {
@@ -41,6 +41,10 @@ module.exports = {
         message:
           '.at is not available in older version of browsers. Use bracket notation instead',
       },
+    ],
+    'import/no-internal-modules': [
+      'error',
+      { allow: ['@mui/**', 'react-dom/*'] },
     ],
   },
 }

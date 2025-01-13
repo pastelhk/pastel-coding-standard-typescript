@@ -64,15 +64,15 @@ module.exports = {
     XMLHttpRequest: false,
   },
   rules: {
-    'no-console': 'error',
-    'no-nested-ternary': 'warn',
+    'no-console': 'off',
+    'no-nested-ternary': 'error',
     'class-methods-use-this': 'off',
     'no-param-reassign': [
       'error',
       { props: true, ignorePropertyModificationsFor: ['self'] },
     ],
     'no-empty': ['error', { allowEmptyCatch: true }],
-    'no-await-in-loop': 'warn',
+    'no-await-in-loop': 'error',
     'no-else-return': 'error',
 
     'node/global-require': 'off',
@@ -90,7 +90,7 @@ module.exports = {
         ],
       },
     ],
-    '@typescript-eslint/explicit-member-accessibility': 'warn',
+    '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -98,17 +98,16 @@ module.exports = {
         format: ['camelCase'],
       },
       {
-        selector: ['accessor'],
-        format: ['camelCase'],
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
       },
       {
-        selector: ['variableLike', 'memberLike', 'method'],
+        selector: 'function',
         format: ['camelCase', 'PascalCase'],
       },
       {
-        selector: ['variableLike', 'memberLike', 'method'],
-        modifiers: ['const'],
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        selector: 'import',
+        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
       },
       {
         selector: 'parameter',
@@ -117,44 +116,29 @@ module.exports = {
       },
       {
         selector: 'parameter',
-        format: ['camelCase', 'PascalCase'],
+        format: ['PascalCase'],
         filter: {
-          regex: 'Component$',
+          regex: '(Component|Factory|Class)$',
           match: true,
         },
         leadingUnderscore: 'allow',
       },
       {
-        selector: 'typeLike',
-        format: ['PascalCase'],
+        selector: 'property',
+        format: ['camelCase', 'snake_case', 'PascalCase'],
+        leadingUnderscore: 'allow',
       },
       {
         selector: 'memberLike',
         modifiers: ['private'],
         format: ['camelCase'],
-        leadingUnderscore: 'allow',
       },
       {
-        selector: 'import',
-        format: ['camelCase', 'PascalCase', 'snake_case', 'UPPER_CASE'],
-      },
-      {
-        selector: 'import',
-        modifiers: ['default'],
-        format: ['camelCase', 'PascalCase'],
-      },
-      // allow lodash import
-      {
-        selector: 'import',
-        modifiers: ['default'],
-        filter: {
-          regex: '^_$',
-          match: true,
-        },
-        format: [],
+        selector: 'typeLike',
+        format: ['PascalCase'],
       },
     ],
-    '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/prefer-optional-chain': ['error'],
     '@typescript-eslint/prefer-nullish-coalescing': ['error'],
     '@typescript-eslint/no-unused-vars': [
@@ -172,20 +156,8 @@ module.exports = {
 
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
-    'import/no-anonymous-default-export': 'warn',
-    'import/no-internal-modules': [
-      'warn',
-      {
-        allow: [
-          'styled-components/native',
-          'react-dom/*',
-          'firebase-admin/*',
-          'react-dom/*',
-          '@mui/*',
-          '@mui/*/*',
-        ],
-      },
-    ],
+    'import/no-anonymous-default-export': 'error',
+    'import/no-internal-modules': 'error',
     'import/no-self-import': 'error',
     'import/namespace': 'off',
 
