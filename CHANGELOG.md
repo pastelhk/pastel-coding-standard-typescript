@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.1...v1.1.0) (2025-01-13)
+
+
+### Features
+
+* add eslintrc for nestjs ([ae5f78f](https://github.com/pasteltech/coding-standard-typescript/commit/ae5f78fc002bf35005e883461cfd9850b5fcc0c2))
+* add nextjs support ([10a2ca0](https://github.com/pasteltech/coding-standard-typescript/commit/10a2ca0cf013daf293310b30b22457b30ff32669))
+* escalate warnings from error with update on naming convention ([6847d4f](https://github.com/pasteltech/coding-standard-typescript/commit/6847d4f1e2b23ac83bddf7485f0e119b525bcd43))
+
+
+
+
+
 ## [1.0.1](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.0...v1.0.1) (2024-08-27)
 
 

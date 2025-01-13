@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.1...v1.1.0) (2025-01-13)
+
+
+### Features
+
+* escalate warnings from error with update on naming convention ([6847d4f](https://github.com/pasteltech/coding-standard-typescript/commit/6847d4f1e2b23ac83bddf7485f0e119b525bcd43))
+
+
+
+
+
 ## [1.0.1](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.0...v1.0.1) (2024-08-27)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-react-native
