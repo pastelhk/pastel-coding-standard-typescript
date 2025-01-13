@@ -7,6 +7,6 @@
   "main": "tsconfig.json",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/tsconfig-react": "^1.0.0"
+    "@pasteltech/tsconfig-react": "1.0.0"
   }
 }
