@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/pasteltech/coding-standard-typescript/compare/v1.1.0...v1.1.1) (2025-01-13)
+
+
+### Bug Fixes
+
+* restrict typescript version under 5.6.0 ([eb5b892](https://github.com/pasteltech/coding-standard-typescript/commit/eb5b892ec1ec17f27735b74bd3b9e42708a2409c))
+
+
+
+
+
 # [1.1.0](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.1...v1.1.0) (2025-01-13)
 
 
