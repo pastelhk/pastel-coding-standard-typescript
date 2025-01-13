@@ -9,6 +9,10 @@
       "path": "packages/eslint-config-node",
     },
     {
+      "name": "⚙️ @pasteltech/eslint-config-nestjs",
+      "path": "packages/eslint-config-nestjs",
+    },
+    {
       "name": "⚙️ @pasteltech/eslint-config-react",
       "path": "packages/eslint-config-react",
     },
@@ -31,6 +35,10 @@
     {
       "name": "⚙️ @pasteltech/tsconfig-node",
       "path": "packages/tsconfig-node",
+    },
+    {
+      "name": "⚙️ @pasteltech/tsconfig-nestjs",
+      "path": "packages/tsconfig-nestjs",
     },
     {
       "name": "⚙️ @pasteltech/tsconfig-react",
