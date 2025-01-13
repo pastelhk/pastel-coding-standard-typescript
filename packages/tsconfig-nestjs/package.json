@@ -7,6 +7,6 @@
   "main": "tsconfig.json",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/tsconfig-node": "^1.1.0"
+    "@pasteltech/tsconfig-node": "1.1.0"
   }
 }

@@ -7,6 +7,6 @@
   "main": ".eslintrc.js",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/eslint-config-node": "^1.1.1"
+    "@pasteltech/eslint-config-node": "1.1.1"
   }
 }

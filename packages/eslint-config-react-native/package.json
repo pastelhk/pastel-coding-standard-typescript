@@ -7,7 +7,7 @@
   "main": ".eslintrc.js",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/eslint-config-react": "^1.1.1",
+    "@pasteltech/eslint-config-react": "1.1.1",
     "eslint-plugin-react-native": "^5.0.0"
   }
 }
