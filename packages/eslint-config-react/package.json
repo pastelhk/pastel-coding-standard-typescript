@@ -4,9 +4,11 @@
   "version": "1.1.1",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
-  "main": ".eslintrc.js",
+  "main": "eslint.config.mjs",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.18.0",
     "@pasteltech/eslint-config-base": "1.1.1",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0"
