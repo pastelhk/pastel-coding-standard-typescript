@@ -3,7 +3,7 @@
   "description": "TypeScript config for Next.js applications",
   "version": "1.1.0",
   "license": "MIT",
-  "repository": "pasteltech/coding-standard-typescript.git",
+  "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "tsconfig.json",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {

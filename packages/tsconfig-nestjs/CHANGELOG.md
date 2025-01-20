@@ -3,18 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.1.0](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.1...v1.1.0) (2025-01-13)
+# [1.1.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.0.1...v1.1.0) (2025-01-13)
 
 
 ### Features
 
-* add eslintrc for nestjs ([ae5f78f](https://github.com/pasteltech/coding-standard-typescript/commit/ae5f78fc002bf35005e883461cfd9850b5fcc0c2))
+* add eslintrc for nestjs ([ae5f78f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae5f78fc002bf35005e883461cfd9850b5fcc0c2))
 
 
 
 
 
-# [1.0.0](https://github.com/pasteltech/coding-standard-typescript/compare/v0.6.2...v1.0.0) (2024-05-17)
+# [1.0.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v0.6.2...v1.0.0) (2024-05-17)
 
 **Note:** Version bump only for package @pasteltech/tsconfig-nestjs
 
@@ -22,12 +22,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.6.0](https://github.com/pasteltech/coding-standard-typescript/compare/v0.5.0...v0.6.0) (2024-05-17)
+# [0.6.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v0.5.0...v0.6.0) (2024-05-17)
 
 
 ### Features
 
-* update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/coding-standard-typescript/commit/c477663063c38160d665045c148122fd80e169ac))
+* update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/pastel-ts-coding-standard/commit/c477663063c38160d665045c148122fd80e169ac))
 
 
 
@@ -38,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add tsconfig for nestjs ([79fe963](https://github.com/pasteltech/coding-standard-typescript/commit/79fe963a4cb16f4fa284807fcf7403c74acf7e44))
+* add tsconfig for nestjs ([79fe963](https://github.com/pasteltech/pastel-ts-coding-standard/commit/79fe963a4cb16f4fa284807fcf7403c74acf7e44))
 
 
 
@@ -49,4 +49,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add tsconfig for nestjs ([79fe963](https://github.com/pasteltech/coding-standard-typescript/commit/79fe963a4cb16f4fa284807fcf7403c74acf7e44))
+* add tsconfig for nestjs ([79fe963](https://github.com/pasteltech/pastel-ts-coding-standard/commit/79fe963a4cb16f4fa284807fcf7403c74acf7e44))

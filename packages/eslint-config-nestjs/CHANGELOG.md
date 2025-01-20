@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.1.1](https://github.com/pasteltech/coding-standard-typescript/compare/v1.1.0...v1.1.1) (2025-01-13)
+## [1.1.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.1.0...v1.1.1) (2025-01-13)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-nestjs
 
@@ -11,9 +11,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.1.0](https://github.com/pasteltech/coding-standard-typescript/compare/v1.0.1...v1.1.0) (2025-01-13)
+# [1.1.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.0.1...v1.1.0) (2025-01-13)
 
 
 ### Features
 
-* add eslintrc for nestjs ([ae5f78f](https://github.com/pasteltech/coding-standard-typescript/commit/ae5f78fc002bf35005e883461cfd9850b5fcc0c2))
+* add eslintrc for nestjs ([ae5f78f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae5f78fc002bf35005e883461cfd9850b5fcc0c2))

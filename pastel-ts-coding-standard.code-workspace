@@ -53,7 +53,7 @@
       "path": "packages/tsconfig-react-native",
     },
     {
-      "name": "✨ @pasteltech/coding-standard-typescript",
+      "name": "✨ @pasteltech/pastel-ts-coding-standard",
       "path": ".",
     },
   ],
@@ -109,7 +109,7 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "typescript.tsdk": "✨ pasteltech/coding-standard-typescript/node_modules/typescript/lib",
+    "typescript.tsdk": "✨ pasteltech/pastel-ts-coding-standard/node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "typescript.preferences.importModuleSpecifier": "relative",
     "eslint.alwaysShowStatus": true,

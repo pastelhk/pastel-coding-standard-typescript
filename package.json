@@ -1,11 +1,11 @@
 {
-  "name": "@pasteltech/coding-standard-typescript",
+  "name": "@pasteltech/pastel-ts-coding-standard",
   "version": "0.1.0",
   "author": "Pastel Tech <info@pastel.com.hk>",
   "license": "MIT",
-  "repository": "pasteltech/coding-standard-typescript.git",
-  "homepage": "https://github.com/pasteltech/coding-standard-typescript#readme",
-  "bugs": "https://github.com/pasteltech/coding-standard-typescript/issues",
+  "repository": "pasteltech/pastel-ts-coding-standard.git",
+  "homepage": "https://github.com/pasteltech/pastel-ts-coding-standard#readme",
+  "bugs": "https://github.com/pasteltech/pastel-ts-coding-standard/issues",
   "workspaces": [
     "packages/*"
   ],
