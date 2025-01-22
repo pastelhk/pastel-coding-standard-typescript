@@ -6,9 +6,9 @@ import globals from 'globals'
 
 export default [
   react.configs.flat.recommended,
-  react.configs.flat['jsx-runtime'],
-  ...base.configs.recommended,
   ...airbnb.configs.react,
+  ...base.configs.recommended,
+  react.configs.flat['jsx-runtime'],
   {
     languageOptions: {
       globals: {
@@ -48,9 +48,15 @@ export default [
       'react/jsx-props-no-spreading': ['warn'],
       'react/prop-types': 'off',
       'react/self-closing-comp': 'error',
+      'react/display-name': 'error',
+      'react/jsx-filename-extension': [
+        'error',
+        { allow: 'as-needed', extensions: ['.tsx'] },
+      ],
+      'react/require-default-props': 'off',
+
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
-      'react/display-name': 'error',
 
       'no-restricted-syntax': [
         'error',
