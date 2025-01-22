@@ -97,7 +97,7 @@ export default [
       'no-await-in-loop': 'error',
       'no-else-return': 'error',
       'node/global-require': 'off',
-      '@typescript-eslint/semi': ['error', 'never'],
+      '@stylistic/semi': ['error', 'never'],
 
       '@typescript-eslint/no-empty-function': [
         'error',

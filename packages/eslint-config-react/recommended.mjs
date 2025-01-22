@@ -1,13 +1,14 @@
 import airbnb from '@pasteltech/eslint-config-airbnb'
 import base from '@pasteltech/eslint-config-base'
 import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
 export default [
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
-  ...airbnb.configs.recommended,
   ...base.configs.recommended,
+  ...airbnb.configs.react,
   {
     languageOptions: {
       globals: {
@@ -22,6 +23,10 @@ export default [
           jsx: true,
         },
       },
+    },
+
+    plugins: {
+      'react-hooks': reactHooks,
     },
 
     settings: {
