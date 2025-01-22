@@ -1,4 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc'
+import react from '@pasteltech/eslint-config-react'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -8,8 +9,22 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 })
 
+const nextDefaultExportFilenames = [
+  'default',
+  'error',
+  'instrumentation',
+  'layout',
+  'mdx-components',
+  'middleware',
+  'not-found',
+  'page',
+  'route',
+  'template',
+]
+
 export default [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...react.configs.recommended,
   {
     rules: {
       'import/no-internal-modules': [
@@ -22,16 +37,7 @@ export default [
   },
   {
     files: [
-      'src/app/**/default.tsx',
-      'src/app/**/error.tsx',
-      'src/app/**/instrumentation.tsx',
-      'src/app/**/layout.tsx',
-      'src/app/**/mdx-components.tsx',
-      'src/app/**/middleware.tsx',
-      'src/app/**/not-found.tsx',
-      'src/app/**/page.tsx',
-      'src/app/**/route.tsx',
-      'src/app/**/template.tsx',
+      ...nextDefaultExportFilenames.map((it) => `src/app/**/${it}.tsx`),
       '**/next.config.*',
       '**/18nConfig.ts',
     ],
