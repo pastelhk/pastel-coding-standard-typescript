@@ -1,14 +1,14 @@
 {
   "name": "@pasteltech/eslint-config-react",
   "description": "Eslint config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "index.mjs",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
     "@pasteltech/eslint-config-airbnb": "^20.0.0",
-    "@pasteltech/eslint-config-base": "1.2.0",
+    "@pasteltech/eslint-config-base": "1.2.1",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0"
   }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.2.0...v1.2.1) (2025-01-22)
+
+
+### Bug Fixes
+
+* **eslint:** use flat config for eslint-config-react ([#11](https://github.com/pasteltech/pastel-ts-coding-standard/issues/11)) ([39cdc2a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/39cdc2ae1a1c8f489f2b2595e93f2b11f35527f8))
+
+
+
+
+
 # [1.2.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.1.1...v1.2.0) (2025-01-22)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.2.0...v1.2.1) (2025-01-22)
+
+
+### Bug Fixes
+
+* **eslint/base:** add eslint-config-prettier as dependency ([34f5664](https://github.com/pasteltech/pastel-ts-coding-standard/commit/34f5664b3a02ec860e08a87cc3015c7e8d4a063a))
+
+
+
+
+
 # [1.2.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.1.1...v1.2.0) (2025-01-22)
 
 

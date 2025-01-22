@@ -1,12 +1,12 @@
 {
   "name": "@pasteltech/eslint-config-node",
   "description": "Eslint config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "index.mjs",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/eslint-config-base": "1.2.0"
+    "@pasteltech/eslint-config-base": "1.2.1"
   }
 }
