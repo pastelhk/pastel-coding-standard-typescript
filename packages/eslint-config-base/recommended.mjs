@@ -1,14 +1,14 @@
 import js from '@eslint/js'
 import airbnb from '@pasteltech/eslint-config-airbnb-typescript'
 import importPlugin from 'eslint-plugin-import'
-import prettier from 'eslint-plugin-prettier'
+import prettier from 'eslint-plugin-prettier/recommended'
 
 export default [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   ...airbnb.configs.base,
-  prettier.configs.recommended,
+  prettier,
   {
     ignores: [
       '**/dist',
