@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-node@1.2.2...@pasteltech/eslint-config-node@1.2.3) (2025-01-22)
+
+
+### Features
+
+* **eslint/node:** use only built in for globals ([931ec33](https://github.com/pasteltech/pastel-ts-coding-standard/commit/931ec33bf0d552e6c2264fd28008b90c5a3cd0a7))
+
+
+
+
+
 ## [1.2.2](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-node@0.3.0...@pasteltech/eslint-config-node@1.2.2) (2025-01-22)
 
 

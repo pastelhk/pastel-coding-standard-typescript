@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-react@1.2.2...@pasteltech/eslint-config-react@1.2.3) (2025-01-22)
+
+
+### Bug Fixes
+
+* **eslint/react:** update rules overwriting of react ([1468ae5](https://github.com/pasteltech/pastel-ts-coding-standard/commit/1468ae5ae0d364ab760944e71797f41bbe2025b6))
+
+
+
+
+
 ## [1.2.2](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-react@0.3.0...@pasteltech/eslint-config-react@1.2.2) (2025-01-22)
 
 
