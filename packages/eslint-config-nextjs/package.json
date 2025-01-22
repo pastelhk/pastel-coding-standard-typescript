@@ -8,7 +8,7 @@
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
     "@pasteltech/eslint-config-react": "1.2.1",
-    "eslint-config-next": "^15.1.5"
+    "@next/eslint-plugin-next": "^15.1.5"
   },
   "peerDependencies": {
     "next": ">=15.1.0"

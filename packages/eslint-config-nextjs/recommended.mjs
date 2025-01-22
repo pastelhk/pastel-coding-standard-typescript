@@ -1,4 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc'
+import next from '@next/eslint-plugin-next'
 import react from '@pasteltech/eslint-config-react'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -23,7 +24,11 @@ const nextDefaultExportFilenames = [
 ]
 
 export default [
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  next.configs.recommended,
+  // ? re-implement eslint-configs-next/core-web-vitals since it includes "extends" at 15.1.5
+  {
+    rules: next.configs['core-web-vitals'].rules,
+  },
   ...react.configs.recommended,
   {
     rules: {
