@@ -3,6 +3,74 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-react@0.3.0...@pasteltech/eslint-config-react@1.2.2) (2025-01-22)
+
+
+### Bug Fixes
+
+* **eslint:** verify rules and fix issues reported by eslint-find-rules ([fcdc38b](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fcdc38bbaaba391c89baa5ac4a19a179a3ef42ca))
+
+
+
+## 1.2.1 (2025-01-22)
+
+
+### Bug Fixes
+
+* **eslint:** use flat config for eslint-config-react ([#11](https://github.com/pasteltech/pastel-ts-coding-standard/issues/11)) ([39cdc2a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/39cdc2ae1a1c8f489f2b2595e93f2b11f35527f8))
+
+
+
+# 1.2.0 (2025-01-22)
+
+
+### Features
+
+* **eslint:** migrate to eslint v9 ([5d57eed](https://github.com/pasteltech/pastel-ts-coding-standard/commit/5d57eedd1e9feea218b954804f73b148d36ba641))
+
+
+
+## 1.1.1 (2025-01-13)
+
+
+
+# 1.1.0 (2025-01-13)
+
+
+### Features
+
+* escalate warnings from error with update on naming convention ([6847d4f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6847d4f1e2b23ac83bddf7485f0e119b525bcd43))
+
+
+
+## 1.0.1 (2024-08-27)
+
+
+
+# 1.0.0 (2024-05-17)
+
+
+
+## 0.6.2 (2024-05-17)
+
+
+
+# 0.6.0 (2024-05-17)
+
+
+### Features
+
+* forbid at function in react ([#2](https://github.com/pasteltech/pastel-ts-coding-standard/issues/2)) ([9b5159f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/9b5159f451159fc0da7dd10130d3714555768cf9))
+* update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/pastel-ts-coding-standard/commit/c477663063c38160d665045c148122fd80e169ac))
+
+
+
+# 0.5.0 (2024-05-17)
+
+
+
+
+
 ## [1.2.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.2.0...v1.2.1) (2025-01-22)
 
 

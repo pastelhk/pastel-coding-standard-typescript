@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-nextjs@1.2.2...@pasteltech/eslint-config-nextjs@1.2.3) (2025-01-22)
+
+
+### Bug Fixes
+
+* **eslint:** verify rules and fix issues reported by eslint-find-rules ([fcdc38b](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fcdc38bbaaba391c89baa5ac4a19a179a3ef42ca))
+
+
+
+
+
 ## 1.2.2 (2025-01-22)
 
 
