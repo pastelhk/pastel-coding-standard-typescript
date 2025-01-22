@@ -4,8 +4,8 @@ import react from 'eslint-plugin-react'
 import globals from 'globals'
 
 export default [
-  react.configs.recommended,
-  react.configs['jsx-runtime'],
+  react.configs.flat.recommended,
+  react.configs.flat['jsx-runtime'],
   ...airbnb.configs.recommended,
   ...base.configs.recommended,
   {
