@@ -3,10 +3,10 @@
     "packages/*",
     "utilities/*"
   ],
-  "version": "1.2.1",
+  "version": "independent",
   "command": {
     "version": {
-      "message": "chore: publish %s",
+      "message": "chore: publish",
       "exact": true
     }
   },
