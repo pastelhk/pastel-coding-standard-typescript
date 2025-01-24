@@ -198,7 +198,12 @@ export default [
       'import/no-extraneous-dependencies': [
         'error',
         {
-          devDependencies: ['**/*.test.*', '**/setup-tests.ts', '**/*.spec.*'],
+          devDependencies: [
+            '**/*.test.*',
+            '**/__tests__/*',
+            '**/setup-tests.ts',
+            '**/*.spec.*',
+          ],
         },
       ],
     },
