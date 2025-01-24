@@ -1,5 +1,6 @@
 import js from '@eslint/js'
-import airbnb from '@pasteltech/eslint-config-airbnb-typescript'
+import airbnb from '@pasteltech/eslint-config-airbnb-base'
+import airbnbTypescript from '@pasteltech/eslint-config-airbnb-typescript'
 import importPlugin from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier/recommended'
 
@@ -8,6 +9,7 @@ export default [
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   ...airbnb.configs.base,
+  ...airbnbTypescript.configs.base,
   prettier,
   {
     ignores: [
