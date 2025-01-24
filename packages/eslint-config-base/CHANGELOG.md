@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.3...@pasteltech/eslint-config-base@1.2.4) (2025-01-24)
+
+
+### Bug Fixes
+
+* **eslint/base:** fix missing airbnb base config ([#15](https://github.com/pasteltech/pastel-ts-coding-standard/issues/15)) ([4a2f51e](https://github.com/pasteltech/pastel-ts-coding-standard/commit/4a2f51e5a27f766eecc736bd4ce111c8e4b5880f))
+
+
+### Features
+
+* **eslint/base:** add exemption rule for eslint config file ([#13](https://github.com/pasteltech/pastel-ts-coding-standard/issues/13)) ([d056aa8](https://github.com/pasteltech/pastel-ts-coding-standard/commit/d056aa8e60cf784cdfd58df03bec184d3146e8b0))
+* **eslint/base:** allow dev dependencies for test files ([#16](https://github.com/pasteltech/pastel-ts-coding-standard/issues/16)) ([070fc54](https://github.com/pasteltech/pastel-ts-coding-standard/commit/070fc54ac6ed9a322d8f1f332d6ff536bf70213e))
+* **eslint/base:** turn off no underscore dangle ([#17](https://github.com/pasteltech/pastel-ts-coding-standard/issues/17)) ([aeb819c](https://github.com/pasteltech/pastel-ts-coding-standard/commit/aeb819c1795337547c989652425f5cba398c9e7e))
+
+
+
+
+
 ## [1.2.3](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.2...@pasteltech/eslint-config-base@1.2.3) (2025-01-22)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-base

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-react-native@1.2.3...@pasteltech/eslint-config-react-native@1.2.4) (2025-01-24)
+
+
+### Features
+
+* **react, react-native:** allow import hookform internal module ([#14](https://github.com/pasteltech/pastel-ts-coding-standard/issues/14)) ([ab41d66](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ab41d6627da1a0b7b1a1e002adb283d8fba4bd9d))
+
+
+
+
+
 ## [1.2.3](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-react-native@1.2.2...@pasteltech/eslint-config-react-native@1.2.3) (2025-01-22)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-react-native

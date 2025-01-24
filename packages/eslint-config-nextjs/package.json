@@ -1,14 +1,14 @@
 {
   "name": "@pasteltech/eslint-config-nextjs",
   "description": "Eslint config",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "index.mjs",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
     "@next/eslint-plugin-next": "^15.1.5",
-    "@pasteltech/eslint-config-react": "1.2.3"
+    "@pasteltech/eslint-config-react": "1.2.4"
   },
   "peerDependencies": {
     "next": ">=15.1.0"
