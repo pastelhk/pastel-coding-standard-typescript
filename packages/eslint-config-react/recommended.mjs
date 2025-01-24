@@ -70,7 +70,7 @@ export default [
       'import/no-internal-modules': [
         'error',
         {
-          allow: ['@mui/**', 'react-dom/*'],
+          allow: ['@mui/**', '@hookform/**', 'react-dom/*'],
         },
       ],
     },

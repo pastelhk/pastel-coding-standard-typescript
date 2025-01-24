@@ -19,7 +19,7 @@ export default [
       'import/no-internal-modules': [
         'error',
         {
-          allow: ['styled-components/native'],
+          allow: ['styled-components/native', '@hookform/**'],
         },
       ],
 
