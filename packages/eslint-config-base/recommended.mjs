@@ -203,4 +203,14 @@ export default [
       ],
     },
   },
+  {
+    files: ['eslint.config.*'],
+    rules: {
+      'import/no-anonymous-default-export': 'off',
+      'import/no-default-export': 'off',
+      'import/no-extraneous-dependencies': 'off',
+      'import/no-named-export': 'error',
+      '@typescript-eslint/naming-convention': 'off',
+    },
+  },
 ]
