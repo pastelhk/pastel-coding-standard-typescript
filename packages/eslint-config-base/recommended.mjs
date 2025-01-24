@@ -208,7 +208,6 @@ export default [
           ],
         },
       ],
-      'no-underscore-dangle': 'off',
     },
   },
   {
