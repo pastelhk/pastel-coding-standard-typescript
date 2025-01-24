@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.4...@pasteltech/eslint-config-base@1.2.5) (2025-01-24)
+
+
+### Reverts
+
+* **eslint/base:** turn off no underscore dangle ([#18](https://github.com/pasteltech/pastel-ts-coding-standard/issues/18)) ([a8e532f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/a8e532fb7f6426039f3d61a85f87fc92050573c0))
+
+
+
+
+
 ## [1.2.4](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.3...@pasteltech/eslint-config-base@1.2.4) (2025-01-24)
 
 
