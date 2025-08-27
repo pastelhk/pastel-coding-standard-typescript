@@ -178,6 +178,11 @@ export default [
           format: null,
           modifiers: ['requiresQuotes'],
         },
+        {
+          selector: 'variable',
+          modifiers: ['destructured'],
+          format: null,
+        },
       ],
 
       '@typescript-eslint/no-var-requires': 'error',
