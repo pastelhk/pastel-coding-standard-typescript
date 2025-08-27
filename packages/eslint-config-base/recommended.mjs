@@ -201,6 +201,7 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
+      '@typescript-eslint/no-floating-promises': 'error',
 
       'import/prefer-default-export': 'off',
       'import/no-default-export': 'error',
