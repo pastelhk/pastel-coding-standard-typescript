@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-node@1.2.5...@pasteltech/eslint-config-node@1.3.0) (2025-08-27)
+
+**Note:** Version bump only for package @pasteltech/eslint-config-node
+
+
+
+
+
 ## [1.2.5](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-node@1.2.4...@pasteltech/eslint-config-node@1.2.5) (2025-01-24)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-node

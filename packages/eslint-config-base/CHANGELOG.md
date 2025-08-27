@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.5...@pasteltech/eslint-config-base@1.3.0) (2025-08-27)
+
+
+### Features
+
+* **eslint/base:** disallow floating promises ([d877a0a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/d877a0ab2d9e5949c51c2b17b4d4a9a708fcf8ec))
+* **eslint/base:** ignore naming convention check for quoted properties ([f76d19d](https://github.com/pasteltech/pastel-ts-coding-standard/commit/f76d19d39415e8e9a8c6e84e51e28f480ab505b5))
+* **eslint/base:** skip naming convention check on destructed variables ([1ea04a5](https://github.com/pasteltech/pastel-ts-coding-standard/commit/1ea04a58b7e9513153b1fba3e4cd31531e1ecd7c))
+
+
+
+
+
 ## [1.2.5](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.4...@pasteltech/eslint-config-base@1.2.5) (2025-01-24)
 
 

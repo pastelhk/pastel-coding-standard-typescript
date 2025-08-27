@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-nextjs@1.2.6...@pasteltech/eslint-config-nextjs@1.3.0) (2025-08-27)
+
+
+### Bug Fixes
+
+* **eslint/nextjs:** align internal modules import with react ([1848e75](https://github.com/pasteltech/pastel-ts-coding-standard/commit/1848e75bb04835b5541bdfe16de4e2e6ee923737))
+
+
+
+
+
 ## [1.2.6](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-nextjs@1.2.5...@pasteltech/eslint-config-nextjs@1.2.6) (2025-01-24)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-nextjs
