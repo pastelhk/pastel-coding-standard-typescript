@@ -22,14 +22,16 @@
     "lint": "npm run lint --workspaces --if-present",
     "postinstall": "patch-package",
     "postversion": "npm run postversion --workspaces --if-present",
-    "publish": "lerna publish --conventional-commits --yes"
+    "publish": "npm_config_legacy_peer_deps=false lerna publish --conventional-commits --yes"
   },
   "prettier": "@pasteltech/prettierrc",
   "devDependencies": {
     "eslint-find-rules": "^5.0.0",
-    "lerna": "^8.1.8",
+    "lerna": "^8.2.3",
+    "next": "^15.5.2",
     "patch-package": "^8.0.0",
-    "prettier": "^3.3.3",
-    "syncpack": "^13.0.0"
+    "prettier": "^3.6.2",
+    "syncpack": "^13.0.4",
+    "typescript": "^5.9.2"
   }
 }
