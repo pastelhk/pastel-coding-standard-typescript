@@ -31,7 +31,13 @@ export default [
       'import/no-internal-modules': [
         'error',
         {
-          allow: ['@mui/**', 'next/**', 'next-i18n-router/**'],
+          allow: [
+            '@mui/**',
+            '@hookform/**',
+            'react-dom/*',
+            'next/**',
+            'next-i18n-router/**',
+          ],
         },
       ],
     },
