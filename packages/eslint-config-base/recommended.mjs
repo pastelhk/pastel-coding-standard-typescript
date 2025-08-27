@@ -164,6 +164,20 @@ export default [
           selector: 'typeLike',
           format: ['PascalCase'],
         },
+        {
+          selector: [
+            'classProperty',
+            'objectLiteralProperty',
+            'typeProperty',
+            'classMethod',
+            'objectLiteralMethod',
+            'typeMethod',
+            'accessor',
+            'enumMember',
+          ],
+          format: null,
+          modifiers: ['requiresQuotes'],
+        },
       ],
 
       '@typescript-eslint/no-var-requires': 'error',
