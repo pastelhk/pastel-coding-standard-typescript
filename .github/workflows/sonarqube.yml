@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+name: SonarQube
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/npm-init
+        name: Initialize
+        with:
+          registry-url: ${{ vars.PRIVATE_NPM_REGISTRY_URL }}
+          registry-username: ${{ vars.PRIVATE_NPM_REGISTRY_USERNAME }}
+          registry-password: ${{ secrets.PRIVATE_NPM_REGISTRY_PASSWORD }}
+
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v6.0.0
+        env:
+          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
+            -Dsonar.projectVersion=${{ env.BRANCH_NAME }}.${{ github.sha }}
