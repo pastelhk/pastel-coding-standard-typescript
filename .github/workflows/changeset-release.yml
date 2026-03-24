@@ -1,0 +1,47 @@
+name: Changeset Release
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  publish:
+    name: Changeset Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Github App Token for Publish
+        id: generate-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.PUBLISH_APP_ID }}
+          private-key: ${{ secrets.PUBLISH_APP_PRIVATE_KEY }}
+
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+
+      - name: Configure Git User
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - uses: ./.github/actions/npm-init
+        name: Initialize Project
+        with:
+          skip-checkout: true
+          registry-url: ${{ vars.PRIVATE_NPM_REGISTRY_URL }}
+          registry-username: ${{ vars.PRIVATE_NPM_REGISTRY_PUBLISH_USERNAME }}
+          registry-password: ${{ secrets.PRIVATE_NPM_REGISTRY_PUBLISH_PASSWORD }}
+
+      - uses: changesets/action@v1
+        with:
+          version: npm run version
+          publish: npm run publish
+          title: 'chore: release'
+          commit: 'chore: release'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
