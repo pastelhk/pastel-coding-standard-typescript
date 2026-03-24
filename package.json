@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "build": "npm run -ws --if-present prepare",
+    "changeset": "changeset",
     "check:format": "prettier -c .",
     "check:lint": "npm run check:lint --workspaces --if-present",
     "check:packages": "syncpack lint",
@@ -22,12 +23,14 @@
     "lint": "npm run lint --workspaces --if-present",
     "postinstall": "patch-package",
     "postversion": "npm run postversion --workspaces --if-present",
-    "publish": "npm_config_legacy_peer_deps=false lerna publish --conventional-commits --yes"
+    "publish": "changeset publish",
+    "version": "changeset version && npm install --package-lock-only"
   },
   "prettier": "@pasteltech/prettierrc",
   "devDependencies": {
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.30.0",
     "eslint-find-rules": "^5.0.0",
-    "lerna": "^8.2.3",
     "next": "^15.5.2",
     "patch-package": "^8.0.0",
     "prettier": "^3.6.2",

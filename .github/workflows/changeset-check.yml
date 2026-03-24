@@ -1,0 +1,33 @@
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+name: Changeset Check
+jobs:
+  changeset-check:
+    name: Changeset Check
+    if: startsWith(github.repository, 'pastelhk/') && github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/npm-init
+        name: Initialize
+        with:
+          registry-url: ${{ vars.PRIVATE_NPM_REGISTRY_URL }}
+          registry-username: ${{ vars.PRIVATE_NPM_REGISTRY_USERNAME }}
+          registry-password: ${{ secrets.PRIVATE_NPM_REGISTRY_PASSWORD }}
+
+      - name: Check changeset status
+        if: ${{ !startsWith(github.head_ref, 'changeset-release/') }}
+        run: npx changeset status --since=origin/${{ github.base_ref }} --verbose
+
+      - name: Check changeset include all necessary packages
+        run: |
+          npx changeset version --dry-run
+          npm run check:packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
