@@ -12,8 +12,16 @@ jobs:
   sonarqube:
     name: SonarQube
     runs-on: ubuntu-latest
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: ./.github/actions/npm-init
         name: Initialize
         with:
