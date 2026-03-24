@@ -1,0 +1,52 @@
+{
+  "$schema": "./node_modules/syncpack/schema.json",
+  "indent": "  ",
+  "semverGroups": [],
+  "sortAz": [
+    "contributors",
+    "dependencies",
+    "devDependencies",
+    "keywords",
+    "peerDependencies",
+    "scripts"
+  ],
+  "sortFirst": [
+    "name",
+    "description",
+    "version",
+    "type",
+    "private",
+    "author",
+    "license",
+    "repository",
+    "homepage",
+    "bugs",
+    "workspaces",
+    "scripts",
+    "main",
+    "module",
+    "browser",
+    "sideEffects",
+    "types",
+    "files",
+    "eslintConfig",
+    "prettier",
+    "dependencies",
+    "peerDependencies",
+    "devDependencies"
+  ],
+  "source": ["package.json", "packages/*/package.json"],
+  "versionGroups": [
+    {
+      "label": "Ignore peerDependencies",
+      "dependencyTypes": ["peer"],
+      "isIgnored": true
+    },
+    {
+      "dependencies": ["@types/**"],
+      "dependencyTypes": ["!dev"],
+      "isBanned": true,
+      "label": "@types packages should only be under devDependencies"
+    }
+  ]
+}

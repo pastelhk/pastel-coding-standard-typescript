@@ -19,7 +19,7 @@
     "check:types": "npm run check:types --workspaces --if-present",
     "clean": "npm run clean --workspaces",
     "fix:format": "prettier --write .",
-    "fix:packages": "syncpack format && syncpack fix-mismatches",
+    "fix:packages": "syncpack format && syncpack fix",
     "lint": "npm run lint --workspaces --if-present",
     "postinstall": "patch-package",
     "postversion": "npm run postversion --workspaces --if-present",
@@ -34,7 +34,7 @@
     "next": "^15.5.2",
     "patch-package": "^8.0.1",
     "prettier": "^3.6.2",
-    "syncpack": "^13.0.4",
+    "syncpack": "^14.2.1",
     "typescript": "^5.9.2"
   }
 }
