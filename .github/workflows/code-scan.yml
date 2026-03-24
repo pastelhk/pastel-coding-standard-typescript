@@ -1,0 +1,113 @@
+name: Code Scan
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  scan:
+    name: Code Scan
+    if: startsWith(github.repository, 'pastelhk/')
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      checks: write
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: 'npm'
+
+      - name: Authenticate NPM Registry
+        run: |
+          npm config set //${{ vars.PRIVATE_NPM_REGISTRY_URL }}:username ${{ vars.PRIVATE_NPM_REGISTRY_USERNAME }}
+          npm config set //${{ vars.PRIVATE_NPM_REGISTRY_URL }}:_password $(echo -n "${{ secrets.PRIVATE_NPM_REGISTRY_PASSWORD }}" | base64 -w 0)
+          git update-index --skip-worktree .npmrc
+
+      - name: Install dependencies
+        run: npm install # using install instead of ci to attempt updating lock file
+
+      - name: Check lock file clean
+        id: check-lockfile
+        run: git --no-pager diff --exit-code --numstat
+
+      - name: Check for vulnerabilities in dependencies
+        if: ${{ github.actor != 'dependabot[bot]' }}
+        id: check-audit
+        run: npm audit --omit=dev
+        continue-on-error: true
+
+      - name: Check package.json
+        id: check-packages
+        run: npm run check:packages
+        continue-on-error: true
+
+      - name: Check Format
+        id: check-format
+        run: npm run check:format
+        continue-on-error: true
+
+      - name: Check Type
+        id: check-types
+        run: npm run check:types
+        continue-on-error: true
+
+      - name: Check Lint
+        id: check-lint
+        run: npm run check:lint
+        continue-on-error: true
+
+      - name: Run Tests
+        id: check-test
+        run: npm run check:test
+        continue-on-error: true
+
+      - name: Test Report
+        if: ${{ !cancelled() }}
+        uses: dorny/test-reporter@v3
+        with:
+          name: Tests
+          path: '**/jest-results/**/*.xml'
+          reporter: jest-junit
+          fail-on-empty: false
+
+      - name: Report Check Results
+        if: always()
+        run: |
+          echo "=== Check Results Summary ==="
+          [ "${{ steps.check-lockfile.outcome }}" = "failure" ] && echo "✗ Lock file check FAILED" || echo "✓ Lock file check PASSED"
+          [ "${{ steps.check-audit.outcome }}" = "failure" ] && echo "✗ Audit check FAILED" || echo "✓ Audit check PASSED"
+          [ "${{ steps.check-packages.outcome }}" = "failure" ] && echo "✗ Package check FAILED" || echo "✓ Package check PASSED"
+          [ "${{ steps.check-format.outcome }}" = "failure" ] && echo "✗ Format check FAILED" || echo "✓ Format check PASSED"
+          [ "${{ steps.check-types.outcome }}" = "failure" ] && echo "✗ Type check FAILED" || echo "✓ Type check PASSED"
+          [ "${{ steps.check-lint.outcome }}" = "failure" ] && echo "✗ Lint check FAILED" || echo "✓ Lint check PASSED"
+          [ "${{ steps.check-test.outcome }}" = "failure" ] && echo "✗ Test check FAILED" || echo "✓ Test check PASSED"
+
+      - name: Fail if any checks failed
+        if: >-
+          always() && (
+            steps.check-lockfile.outcome == 'failure' ||
+            steps.check-audit.outcome == 'failure' ||
+            steps.check-packages.outcome == 'failure' ||
+            steps.check-format.outcome == 'failure' ||
+            steps.check-types.outcome == 'failure' ||
+            steps.check-lint.outcome == 'failure' ||
+            steps.check-test.outcome == 'failure'
+          )
+        run: exit 1

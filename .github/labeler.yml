@@ -1,0 +1,8 @@
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file: ['package-lock.json']
+
+cicd:
+  - changed-files:
+      - any-glob-to-any-file:
+          ['.azure-pipelines/**', '.github/**', '**/.azure-pipelines/**']

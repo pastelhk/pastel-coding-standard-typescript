@@ -1,0 +1,43 @@
+name: PR Labeler
+on:
+  - pull_request_target
+
+jobs:
+  labeler:
+    name: PR Labeler
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      - uses: actions/labeler@v5
+
+      - name: Label per monorepo
+        uses: TinkurLab/monorepo-pr-labeler-action@4.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_DIRS: 'tools'
+        with:
+          prefix: '🛠️'
+          separator: ' '
+
+      - name: Label per monorepo
+        uses: TinkurLab/monorepo-pr-labeler-action@4.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_DIRS: 'packages'
+        with:
+          prefix: '📦'
+          separator: ' '
+
+      - name: Label per monorepo
+        uses: TinkurLab/monorepo-pr-labeler-action@4.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_DIRS: 'apps'
+        with:
+          prefix: '🚀'
+          separator: ' '
