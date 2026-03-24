@@ -27,7 +27,7 @@
   "prettier": "@pasteltech/prettierrc",
   "devDependencies": {
     "eslint-find-rules": "^5.0.0",
-    "lerna": "^8.2.3",
+    "lerna": "^9.0.7",
     "next": "^15.5.2",
     "patch-package": "^8.0.0",
     "prettier": "^3.6.2",
