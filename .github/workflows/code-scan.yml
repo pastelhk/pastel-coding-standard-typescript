@@ -1,6 +1,7 @@
 name: Code Scan
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -18,6 +19,7 @@ jobs:
     permissions:
       contents: read
       checks: write
+      pull-requests: write
 
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -35,17 +37,37 @@ jobs:
           cache: 'npm'
 
       - name: Authenticate NPM Registry
+        if: startsWith(github.repository, 'pastelhk/')
         run: |
           npm config set //${{ vars.PRIVATE_NPM_REGISTRY_URL }}:username ${{ vars.PRIVATE_NPM_REGISTRY_USERNAME }}
           npm config set //${{ vars.PRIVATE_NPM_REGISTRY_URL }}:_password $(echo -n "${{ secrets.PRIVATE_NPM_REGISTRY_PASSWORD }}" | base64 -w 0)
           git update-index --skip-worktree .npmrc
 
+      # Intentionally use `npm install` instead of `npm ci` to detect updates to lock file
       - name: Install dependencies
-        run: npm install # using install instead of ci to attempt updating lock file
+        run: npm install
 
       - name: Check lock file clean
         id: check-lockfile
         run: git --no-pager diff --exit-code --numstat
+
+      - name: Cache ESLint caches
+        uses: actions/cache@v4
+        with:
+          path: |
+            **/.eslintcache
+          key: ${{ runner.os }}-eslint-${{ hashFiles('**/package-lock.json', '**/eslint.config.js') }}
+          restore-keys: |
+            ${{ runner.os }}-eslint-
+
+      - name: Cache TS Build Info caches
+        uses: actions/cache@v4
+        with:
+          path: |
+            **/tsconfig.tsbuildinfo
+          key: ${{ runner.os }}-tsbuildinfo-${{ hashFiles('**/package-lock.json', '**/tsconfig.json') }}
+          restore-keys: |
+            ${{ runner.os }}-tsbuildinfo-
 
       - name: Check for vulnerabilities in dependencies
         if: ${{ github.actor != 'dependabot[bot]' }}
@@ -83,31 +105,67 @@ jobs:
         uses: dorny/test-reporter@v3
         with:
           name: Tests
-          path: '**/jest-results/**/*.xml'
+          path: '**/__test-results__/**/*.xml'
           reporter: jest-junit
           fail-on-empty: false
 
-      - name: Report Check Results
-        if: always()
-        run: |
-          echo "=== Check Results Summary ==="
-          [ "${{ steps.check-lockfile.outcome }}" = "failure" ] && echo "✗ Lock file check FAILED" || echo "✓ Lock file check PASSED"
-          [ "${{ steps.check-audit.outcome }}" = "failure" ] && echo "✗ Audit check FAILED" || echo "✓ Audit check PASSED"
-          [ "${{ steps.check-packages.outcome }}" = "failure" ] && echo "✗ Package check FAILED" || echo "✓ Package check PASSED"
-          [ "${{ steps.check-format.outcome }}" = "failure" ] && echo "✗ Format check FAILED" || echo "✓ Format check PASSED"
-          [ "${{ steps.check-types.outcome }}" = "failure" ] && echo "✗ Type check FAILED" || echo "✓ Type check PASSED"
-          [ "${{ steps.check-lint.outcome }}" = "failure" ] && echo "✗ Lint check FAILED" || echo "✓ Lint check PASSED"
-          [ "${{ steps.check-test.outcome }}" = "failure" ] && echo "✗ Test check FAILED" || echo "✓ Test check PASSED"
+      - name: SonarQube Scan
+        id: check-sonarqube
+        uses: SonarSource/sonarqube-scan-action@v7
+        env:
+          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
+            -Dsonar.projectVersion=${{ github.ref_name }}-${{ github.sha }}
+        continue-on-error: true
 
-      - name: Fail if any checks failed
-        if: >-
-          always() && (
-            steps.check-lockfile.outcome == 'failure' ||
-            steps.check-audit.outcome == 'failure' ||
-            steps.check-packages.outcome == 'failure' ||
-            steps.check-format.outcome == 'failure' ||
-            steps.check-types.outcome == 'failure' ||
-            steps.check-lint.outcome == 'failure' ||
-            steps.check-test.outcome == 'failure'
-          )
-        run: exit 1
+      - name: Generate Results Report
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const checks = [
+              { name: 'Lock file', outcome: '${{ steps.check-lockfile.outcome }}' },
+              { name: 'Audit', outcome: '${{ steps.check-audit.outcome }}' },
+              { name: 'Package.json', outcome: '${{ steps.check-packages.outcome }}' },
+              { name: 'Format', outcome: '${{ steps.check-format.outcome }}' },
+              { name: 'Types', outcome: '${{ steps.check-types.outcome }}' },
+              { name: 'Lint', outcome: '${{ steps.check-lint.outcome }}' },
+              { name: 'Tests', outcome: '${{ steps.check-test.outcome }}' },
+              { name: 'SonarQube', outcome: '${{ steps.check-sonarqube.outcome }}' },
+            ];
+
+            const results = checks.map(c => ({
+              name: c.name,
+              status: c.outcome === 'failure' ? '❌' : '✅',
+              passed: c.outcome !== 'failure'
+            }));
+
+            // Console output
+            console.log('\n📋 Code Scan Results\n');
+            results.forEach(r => console.log(`${r.status} ${r.name}`));
+
+            const allPassed = results.every(r => r.passed);
+            if (allPassed) console.log('\n✅ All checks passed!');
+            else console.log('\n⚠️  Some checks failed');
+
+            // PR comment (if on pull request)
+            if (context.eventName === 'pull_request') {
+              const rows = results.map(r => `| ${r.name} | ${r.status} |`).join('\n');
+              const summary = allPassed ? '✅ All checks passed!' : '⚠️ Some checks need attention';
+              const body = `## 📋 Code Scan Results\n\n| Check | Status |\n|-------|--------|\n${rows}\n\n${summary}`;
+              
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: body
+              });
+            }
+
+            // Fail if any checks failed
+            if (!allPassed) {
+              core.setFailed('❌ Some checks failed. See results above.');
+            }
