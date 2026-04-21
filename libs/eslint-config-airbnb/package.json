@@ -1,6 +1,6 @@
 {
   "name": "@pasteltech/eslint-config-airbnb",
-  "version": "20.1.0",
+  "version": "20.1.1",
   "description": "Airbnb's ESLint config, following our styleguide. Cloned for modernization.",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
@@ -15,7 +15,7 @@
   "main": "index.mjs",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/eslint-config-airbnb-base": "16.1.0"
+    "@pasteltech/eslint-config-airbnb-base": "16.1.1"
   },
   "peerDependencies": {
     "eslint": "^9.18.0 || >=10",
