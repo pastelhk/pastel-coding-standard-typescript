@@ -53,6 +53,19 @@
       "path": "packages/tsconfig-react-native",
     },
     {
+      "name": "⚙️ @pasteltech/eslint-config-airbnb-typescript",
+      "path": "libs/eslint-config-airbnb-typescript",
+    },
+    {
+      "name": "⚙️ @pasteltech/eslint-config-airbnb",
+      "path": "libs/eslint-config-airbnb",
+    },
+    {
+      "name": "⚙️ @pasteltech/eslint-config-airbnb-base",
+      "path": "libs/eslint-config-airbnb-base",
+    },
+
+    {
       "name": "✨ @pasteltech/pastel-ts-coding-standard",
       "path": ".",
     },

@@ -1,0 +1,31 @@
+{
+  "name": "@pasteltech/eslint-config-airbnb-typescript",
+  "version": "19.1.0",
+  "description": "Airbnb's ESLint config with TypeScript support. Cloned for modernization.",
+  "license": "MIT",
+  "repository": "pasteltech/pastel-ts-coding-standard.git",
+  "scripts": {
+    "check:lint": "npm run lint",
+    "check:types": "tsc --noEmit",
+    "lint": "eslint ./"
+  },
+  "main": "index.mjs",
+  "files": [
+    "*.mjs",
+    "lib"
+  ],
+  "prettier": "@pasteltech/prettierrc",
+  "dependencies": {
+    "@pasteltech/eslint-config-airbnb": "20.1.0",
+    "@pasteltech/eslint-config-airbnb-base": "16.1.0",
+    "@stylistic/eslint-plugin": "^2.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "typescript-eslint": "^8.21.0 || >=9"
+  },
+  "peerDependencies": {
+    "eslint": "^9.18.0 || >=10",
+    "eslint-plugin-react": "^7.35.0 || >=8.0.0",
+    "typescript-eslint": "^8.21.0 || >=9"
+  }
+}

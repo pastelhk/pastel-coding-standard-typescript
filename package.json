@@ -7,6 +7,7 @@
   "homepage": "https://github.com/pasteltech/pastel-ts-coding-standard#readme",
   "bugs": "https://github.com/pasteltech/pastel-ts-coding-standard/issues",
   "workspaces": [
+    "libs/*",
     "packages/*"
   ],
   "scripts": {

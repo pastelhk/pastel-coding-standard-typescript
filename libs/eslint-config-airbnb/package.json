@@ -1,0 +1,33 @@
+{
+  "name": "@pasteltech/eslint-config-airbnb",
+  "version": "20.1.0",
+  "description": "Airbnb's ESLint config, following our styleguide. Cloned for modernization.",
+  "license": "MIT",
+  "repository": "pasteltech/pastel-ts-coding-standard.git",
+  "scripts": {
+    "check:lint": "npm run lint",
+    "lint": "eslint --report-unused-disable-directives ."
+  },
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "index.mjs",
+  "prettier": "@pasteltech/prettierrc",
+  "dependencies": {
+    "@pasteltech/eslint-config-airbnb-base": "16.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.18.0 || >=10",
+    "eslint-plugin-import": "^2.31.0 || >=3.0.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0 || >=7.0.0",
+    "eslint-plugin-react": "^7.35.0 || >=8.0.0",
+    "eslint-plugin-react-hooks": "^5.1.0 || >=6.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@pasteltech/eslint-config-airbnb-base",
+  "version": "16.1.0",
+  "description": "Airbnb's base JS ESLint config, following our styleguide. Cloned for modernization.",
+  "license": "MIT",
+  "repository": "pasteltech/pastel-ts-coding-standard.git",
+  "scripts": {
+    "check:lint": "npm run lint",
+    "lint": "eslint --report-unused-disable-directives ."
+  },
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "index.mjs",
+  "prettier": "@pasteltech/prettierrc",
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.11",
+    "globals": "^15.14.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.34.0 || >=10",
+    "eslint-plugin-import": "^2.31.0 || >=3.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.32.0"
+  }
+}
