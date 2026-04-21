@@ -32,7 +32,6 @@ jobs:
       - uses: ./.github/actions/npm-init
         name: Initialize Project
         with:
-          skip-checkout: true
           registry-url: ${{ vars.PRIVATE_NPM_REGISTRY_URL }}
           registry-username: ${{ vars.PRIVATE_NPM_REGISTRY_PUBLISH_USERNAME }}
           registry-password: ${{ secrets.PRIVATE_NPM_REGISTRY_PUBLISH_PASSWORD }}
