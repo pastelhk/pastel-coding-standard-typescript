@@ -30,8 +30,12 @@ runs:
     - name: Append auth to .npmrc
       if: inputs.registry-url != ''
       run: |
-        npm config set //${{ inputs.registry-url }}:username ${{ inputs.registry-username }}
-        npm config set //${{ inputs.registry-url }}:_password $(echo -n "${{ inputs.registry-password }}" | base64 -w 0)
+        npx npm-cli-login \
+          -u ${{ inputs.registry-username }} \
+          -p ${{ inputs.registry-password }} \
+          -e ${{ inputs.registry-username }}@${{ inputs.registry-url }} \
+          -r https://${{ inputs.registry-url }} \
+          --config-path .npmrc
         git update-index --skip-worktree .npmrc
       shell: ${{ inputs.shell }}
 

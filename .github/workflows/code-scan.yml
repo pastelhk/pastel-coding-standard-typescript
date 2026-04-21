@@ -39,8 +39,12 @@ jobs:
       - name: Authenticate NPM Registry
         if: startsWith(github.repository, 'pastelhk/')
         run: |
-          npm config set //${{ vars.PRIVATE_NPM_REGISTRY_URL }}:username ${{ vars.PRIVATE_NPM_REGISTRY_USERNAME }}
-          npm config set //${{ vars.PRIVATE_NPM_REGISTRY_URL }}:_password $(echo -n "${{ secrets.PRIVATE_NPM_REGISTRY_PASSWORD }}" | base64 -w 0)
+          npx npm-cli-login \
+            -u ${{ vars.PRIVATE_NPM_REGISTRY_USERNAME }} \
+            -p ${{ secrets.PRIVATE_NPM_REGISTRY_PASSWORD }} \
+            -e ${{ vars.PRIVATE_NPM_REGISTRY_USERNAME }}@${{ vars.PRIVATE_NPM_REGISTRY_URL }} \
+            -r https://${{ vars.PRIVATE_NPM_REGISTRY_URL }} \
+            --config-path .npmrc
           git update-index --skip-worktree .npmrc
 
       # Intentionally use `npm install` instead of `npm ci` to detect updates to lock file
