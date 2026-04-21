@@ -8,7 +8,6 @@ import node from './rules/node.mjs'
 import strict from './rules/strict.mjs'
 import style from './rules/style.mjs'
 import variables from './rules/variables.mjs'
-import whitespace from './whitespace.mjs'
 
 import pkg from './package.json' with { type: 'json' }
 
@@ -20,7 +19,6 @@ export default {
   configs: {
     base,
     legacy,
-    whitespace,
 
     bestPractices,
     errors,

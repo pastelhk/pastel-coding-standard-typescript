@@ -1,7 +1,7 @@
 import index from './index.mjs'
 
 export default [
-  ...index.configs.whitespace,
+  ...index.configs.base,
   {
     rules: {
       // disable requiring trailing commas because it might be nice to revert to
