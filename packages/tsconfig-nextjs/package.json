@@ -1,7 +1,7 @@
 {
   "name": "@pasteltech/tsconfig-nextjs",
-  "description": "TypeScript config for Next.js applications",
   "version": "1.2.0",
+  "description": "TypeScript config for Next.js applications",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "tsconfig.json",

@@ -1,57 +1,85 @@
 {
   "$schema": "./node_modules/syncpack/schema.json",
   "indent": "  ",
-  "semverGroups": [],
-  "sortAz": [
-    "contributors",
-    "dependencies",
-    "devDependencies",
-    "keywords",
-    "peerDependencies",
-    "scripts"
-  ],
+  "source": ["package.json", "packages/*/package.json", "libs/*/package.json"],
   "sortFirst": [
     "name",
-    "description",
     "version",
+    "description",
+    "keywords",
     "type",
     "private",
     "author",
     "license",
+    "engines",
     "repository",
     "homepage",
     "bugs",
     "workspaces",
     "scripts",
+    "exports",
     "main",
     "module",
     "browser",
-    "sideEffects",
     "types",
+    "bin",
+    "sideEffects",
     "files",
     "eslintConfig",
     "prettier",
     "dependencies",
     "peerDependencies",
-    "devDependencies"
+    "peerDependenciesMeta",
+    "optionalDependencies",
+    "devDependencies",
+    "overrides"
   ],
-  "source": ["package.json", "packages/*/package.json"],
+  "sortAz": [
+    "scripts",
+    "keywords",
+    "contributors",
+    "dependencies",
+    "peerDependencies",
+    "peerDependenciesMeta",
+    "optionalDependencies",
+    "devDependencies",
+    "overrides"
+  ],
+  "semverGroups": [
+    {
+      "label": "Local workspace packages should use exact version",
+      "dependencies": ["$LOCAL"],
+      "range": "",
+      "specifierTypes": ["exact"]
+    },
+    {
+      "label": "Use caret ranges for dependencies",
+      "dependencies": ["**"],
+      "dependencyTypes": ["prod", "dev"],
+      "range": "^"
+    }
+  ],
   "versionGroups": [
-    {
-      "label": "Align peerDependencies with each other",
-      "dependencies": ["**"],
-      "dependencyTypes": ["peer"]
-    },
-    {
-      "label": "Align dependencies with each other",
-      "dependencies": ["**"],
-      "dependencyTypes": ["prod", "dev"]
-    },
     {
       "dependencies": ["@types/**"],
       "dependencyTypes": ["!dev"],
       "isBanned": true,
       "label": "@types packages should only be under devDependencies"
+    },
+    {
+      "label": "Local workspace packages",
+      "dependencies": ["$LOCAL"]
+    },
+    {
+      "label": "Align peerDependencies with each other",
+      "dependencies": ["**"],
+      "dependencyTypes": ["peer"],
+      "policy": "sameRange"
+    },
+    {
+      "label": "Align dependencies with each other",
+      "dependencies": ["**"],
+      "dependencyTypes": ["prod", "dev"]
     }
   ]
 }

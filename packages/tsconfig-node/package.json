@@ -1,7 +1,7 @@
 {
   "name": "@pasteltech/tsconfig-node",
-  "description": "TypeScript config for Node.js applications",
   "version": "1.2.0",
+  "description": "TypeScript config for Node.js applications",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "tsconfig.json",

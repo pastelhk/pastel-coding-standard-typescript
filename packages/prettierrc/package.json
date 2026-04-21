@@ -1,7 +1,7 @@
 {
   "name": "@pasteltech/prettierrc",
-  "description": "Prettier config",
   "version": "1.2.0",
+  "description": "Prettier config",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "prettierrc.js",
