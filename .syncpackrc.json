@@ -38,9 +38,14 @@
   "source": ["package.json", "packages/*/package.json"],
   "versionGroups": [
     {
-      "label": "Ignore peerDependencies",
-      "dependencyTypes": ["peer"],
-      "isIgnored": true
+      "label": "Align peerDependencies with each other",
+      "dependencies": ["**"],
+      "dependencyTypes": ["peer"]
+    },
+    {
+      "label": "Align dependencies with each other",
+      "dependencies": ["**"],
+      "dependencyTypes": ["prod", "dev"]
     },
     {
       "dependencies": ["@types/**"],
