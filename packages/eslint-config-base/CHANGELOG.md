@@ -1,318 +1,207 @@
 # Change Log
 
+## 1.3.1
+
+### Patch Changes
+
+- [`c9e53ea`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/c9e53ea7d5f4226b3a9b0f7ba4d8119de24fcdac) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - build(deps): support eslint v10 and above
+
+- [#25](https://github.com/pastelhk/pastel-ts-coding-standard/pull/25) [`8d2845b`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/8d2845b97bbdf353ff7beba745a4b8de88cdc197) Thanks [@ctfdavis](https://github.com/ctfdavis)! - Add ignoreIIFE option to @typescript-eslint/no-floating-promises rule
+
+- Updated dependencies [[`fbf734f`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/fbf734f551cf5e7d10be99fa64ecec5e4a3aae82), [`4f6f7d4`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/4f6f7d45110cf166d6ec89b076a171ddc445a1ce)]:
+  - @pasteltech/eslint-config-airbnb-base@16.1.1
+  - @pasteltech/eslint-config-airbnb-typescript@19.1.1
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 # [1.3.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.5...@pasteltech/eslint-config-base@1.3.0) (2025-08-27)
 
-
 ### Features
 
-* **eslint/base:** disallow floating promises ([d877a0a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/d877a0ab2d9e5949c51c2b17b4d4a9a708fcf8ec))
-* **eslint/base:** ignore naming convention check for quoted properties ([f76d19d](https://github.com/pasteltech/pastel-ts-coding-standard/commit/f76d19d39415e8e9a8c6e84e51e28f480ab505b5))
-* **eslint/base:** skip naming convention check on destructed variables ([1ea04a5](https://github.com/pasteltech/pastel-ts-coding-standard/commit/1ea04a58b7e9513153b1fba3e4cd31531e1ecd7c))
-
-
-
-
+- **eslint/base:** disallow floating promises ([d877a0a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/d877a0ab2d9e5949c51c2b17b4d4a9a708fcf8ec))
+- **eslint/base:** ignore naming convention check for quoted properties ([f76d19d](https://github.com/pasteltech/pastel-ts-coding-standard/commit/f76d19d39415e8e9a8c6e84e51e28f480ab505b5))
+- **eslint/base:** skip naming convention check on destructed variables ([1ea04a5](https://github.com/pasteltech/pastel-ts-coding-standard/commit/1ea04a58b7e9513153b1fba3e4cd31531e1ecd7c))
 
 ## [1.2.5](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.4...@pasteltech/eslint-config-base@1.2.5) (2025-01-24)
 
-
 ### Reverts
 
-* **eslint/base:** turn off no underscore dangle ([#18](https://github.com/pasteltech/pastel-ts-coding-standard/issues/18)) ([a8e532f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/a8e532fb7f6426039f3d61a85f87fc92050573c0))
-
-
-
-
+- **eslint/base:** turn off no underscore dangle ([#18](https://github.com/pasteltech/pastel-ts-coding-standard/issues/18)) ([a8e532f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/a8e532fb7f6426039f3d61a85f87fc92050573c0))
 
 ## [1.2.4](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.3...@pasteltech/eslint-config-base@1.2.4) (2025-01-24)
 
-
 ### Bug Fixes
 
-* **eslint/base:** fix missing airbnb base config ([#15](https://github.com/pasteltech/pastel-ts-coding-standard/issues/15)) ([4a2f51e](https://github.com/pasteltech/pastel-ts-coding-standard/commit/4a2f51e5a27f766eecc736bd4ce111c8e4b5880f))
-
+- **eslint/base:** fix missing airbnb base config ([#15](https://github.com/pasteltech/pastel-ts-coding-standard/issues/15)) ([4a2f51e](https://github.com/pasteltech/pastel-ts-coding-standard/commit/4a2f51e5a27f766eecc736bd4ce111c8e4b5880f))
 
 ### Features
 
-* **eslint/base:** add exemption rule for eslint config file ([#13](https://github.com/pasteltech/pastel-ts-coding-standard/issues/13)) ([d056aa8](https://github.com/pasteltech/pastel-ts-coding-standard/commit/d056aa8e60cf784cdfd58df03bec184d3146e8b0))
-* **eslint/base:** allow dev dependencies for test files ([#16](https://github.com/pasteltech/pastel-ts-coding-standard/issues/16)) ([070fc54](https://github.com/pasteltech/pastel-ts-coding-standard/commit/070fc54ac6ed9a322d8f1f332d6ff536bf70213e))
-* **eslint/base:** turn off no underscore dangle ([#17](https://github.com/pasteltech/pastel-ts-coding-standard/issues/17)) ([aeb819c](https://github.com/pasteltech/pastel-ts-coding-standard/commit/aeb819c1795337547c989652425f5cba398c9e7e))
-
-
-
-
+- **eslint/base:** add exemption rule for eslint config file ([#13](https://github.com/pasteltech/pastel-ts-coding-standard/issues/13)) ([d056aa8](https://github.com/pasteltech/pastel-ts-coding-standard/commit/d056aa8e60cf784cdfd58df03bec184d3146e8b0))
+- **eslint/base:** allow dev dependencies for test files ([#16](https://github.com/pasteltech/pastel-ts-coding-standard/issues/16)) ([070fc54](https://github.com/pasteltech/pastel-ts-coding-standard/commit/070fc54ac6ed9a322d8f1f332d6ff536bf70213e))
+- **eslint/base:** turn off no underscore dangle ([#17](https://github.com/pasteltech/pastel-ts-coding-standard/issues/17)) ([aeb819c](https://github.com/pasteltech/pastel-ts-coding-standard/commit/aeb819c1795337547c989652425f5cba398c9e7e))
 
 ## [1.2.3](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@1.2.2...@pasteltech/eslint-config-base@1.2.3) (2025-01-22)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-base
 
-
-
-
-
 ## [1.2.2](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@0.3.0...@pasteltech/eslint-config-base@1.2.2) (2025-01-22)
-
 
 ### Bug Fixes
 
-* **eslint:** verify rules and fix issues reported by eslint-find-rules ([fcdc38b](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fcdc38bbaaba391c89baa5ac4a19a179a3ef42ca))
-
-
+- **eslint:** verify rules and fix issues reported by eslint-find-rules ([fcdc38b](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fcdc38bbaaba391c89baa5ac4a19a179a3ef42ca))
 
 ## 1.2.1 (2025-01-22)
 
-
 ### Bug Fixes
 
-* **eslint/base:** add eslint-config-prettier as dependency ([34f5664](https://github.com/pasteltech/pastel-ts-coding-standard/commit/34f5664b3a02ec860e08a87cc3015c7e8d4a063a))
-
-
+- **eslint/base:** add eslint-config-prettier as dependency ([34f5664](https://github.com/pasteltech/pastel-ts-coding-standard/commit/34f5664b3a02ec860e08a87cc3015c7e8d4a063a))
 
 # 1.2.0 (2025-01-22)
 
-
 ### Features
 
-* **eslint:** migrate to eslint v9 ([5d57eed](https://github.com/pasteltech/pastel-ts-coding-standard/commit/5d57eedd1e9feea218b954804f73b148d36ba641))
-
-
+- **eslint:** migrate to eslint v9 ([5d57eed](https://github.com/pasteltech/pastel-ts-coding-standard/commit/5d57eedd1e9feea218b954804f73b148d36ba641))
 
 ## 1.1.1 (2025-01-13)
 
-
 ### Bug Fixes
 
-* restrict typescript version under 5.6.0 ([eb5b892](https://github.com/pasteltech/pastel-ts-coding-standard/commit/eb5b892ec1ec17f27735b74bd3b9e42708a2409c))
-
-
+- restrict typescript version under 5.6.0 ([eb5b892](https://github.com/pasteltech/pastel-ts-coding-standard/commit/eb5b892ec1ec17f27735b74bd3b9e42708a2409c))
 
 # 1.1.0 (2025-01-13)
 
-
 ### Features
 
-* escalate warnings from error with update on naming convention ([6847d4f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6847d4f1e2b23ac83bddf7485f0e119b525bcd43))
-
-
+- escalate warnings from error with update on naming convention ([6847d4f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6847d4f1e2b23ac83bddf7485f0e119b525bcd43))
 
 ## 1.0.1 (2024-08-27)
 
-
 ### Bug Fixes
 
-* **eslint:** forbid console statement ([#7](https://github.com/pasteltech/pastel-ts-coding-standard/issues/7)) ([2d262c1](https://github.com/pasteltech/pastel-ts-coding-standard/commit/2d262c178420da3a061d41df2c4bc67973bfa161))
-* **eslint:** relax naming convention ([#5](https://github.com/pasteltech/pastel-ts-coding-standard/issues/5)) ([9218e85](https://github.com/pasteltech/pastel-ts-coding-standard/commit/9218e85d251eac2b69c87e9219794cedbb3e091c))
-
+- **eslint:** forbid console statement ([#7](https://github.com/pasteltech/pastel-ts-coding-standard/issues/7)) ([2d262c1](https://github.com/pasteltech/pastel-ts-coding-standard/commit/2d262c178420da3a061d41df2c4bc67973bfa161))
+- **eslint:** relax naming convention ([#5](https://github.com/pasteltech/pastel-ts-coding-standard/issues/5)) ([9218e85](https://github.com/pasteltech/pastel-ts-coding-standard/commit/9218e85d251eac2b69c87e9219794cedbb3e091c))
 
 ### Features
 
-* **eslint:** allow unused underscore ([#6](https://github.com/pasteltech/pastel-ts-coding-standard/issues/6)) ([7aa8b5a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/7aa8b5a5e07184b4087958a8a0af2ca70c0c6ade))
-
-
+- **eslint:** allow unused underscore ([#6](https://github.com/pasteltech/pastel-ts-coding-standard/issues/6)) ([7aa8b5a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/7aa8b5a5e07184b4087958a8a0af2ca70c0c6ade))
 
 # 1.0.0 (2024-05-17)
 
-
-
 ## 0.6.2 (2024-05-17)
-
 
 ### Bug Fixes
 
-* **eslint-config-base:** correct invalid pattern on eslint extraneous dependencies rule ([#3](https://github.com/pasteltech/pastel-ts-coding-standard/issues/3)) ([a94d8ae](https://github.com/pasteltech/pastel-ts-coding-standard/commit/a94d8aefd4e2c86a5ce67578ee5d847a478230b9))
-
-
+- **eslint-config-base:** correct invalid pattern on eslint extraneous dependencies rule ([#3](https://github.com/pasteltech/pastel-ts-coding-standard/issues/3)) ([a94d8ae](https://github.com/pasteltech/pastel-ts-coding-standard/commit/a94d8aefd4e2c86a5ce67578ee5d847a478230b9))
 
 # 0.6.0 (2024-05-17)
 
-
 ### Features
 
-* update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/pastel-ts-coding-standard/commit/c477663063c38160d665045c148122fd80e169ac))
-
-
+- update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/pastel-ts-coding-standard/commit/c477663063c38160d665045c148122fd80e169ac))
 
 # 0.5.0 (2024-05-17)
 
-
-
-
-
 ## [1.2.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.2.0...v1.2.1) (2025-01-22)
-
 
 ### Bug Fixes
 
-* **eslint/base:** add eslint-config-prettier as dependency ([34f5664](https://github.com/pasteltech/pastel-ts-coding-standard/commit/34f5664b3a02ec860e08a87cc3015c7e8d4a063a))
-
-
-
-
+- **eslint/base:** add eslint-config-prettier as dependency ([34f5664](https://github.com/pasteltech/pastel-ts-coding-standard/commit/34f5664b3a02ec860e08a87cc3015c7e8d4a063a))
 
 # [1.2.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.1.1...v1.2.0) (2025-01-22)
 
-
 ### Features
 
-* **eslint:** migrate to eslint v9 ([5d57eed](https://github.com/pasteltech/pastel-ts-coding-standard/commit/5d57eedd1e9feea218b954804f73b148d36ba641))
-
-
-
-
+- **eslint:** migrate to eslint v9 ([5d57eed](https://github.com/pasteltech/pastel-ts-coding-standard/commit/5d57eedd1e9feea218b954804f73b148d36ba641))
 
 ## [1.1.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.1.0...v1.1.1) (2025-01-13)
 
-
 ### Bug Fixes
 
-* restrict typescript version under 5.6.0 ([eb5b892](https://github.com/pasteltech/pastel-ts-coding-standard/commit/eb5b892ec1ec17f27735b74bd3b9e42708a2409c))
-
-
-
-
+- restrict typescript version under 5.6.0 ([eb5b892](https://github.com/pasteltech/pastel-ts-coding-standard/commit/eb5b892ec1ec17f27735b74bd3b9e42708a2409c))
 
 # [1.1.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.0.1...v1.1.0) (2025-01-13)
 
-
 ### Features
 
-* escalate warnings from error with update on naming convention ([6847d4f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6847d4f1e2b23ac83bddf7485f0e119b525bcd43))
-
-
-
-
+- escalate warnings from error with update on naming convention ([6847d4f](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6847d4f1e2b23ac83bddf7485f0e119b525bcd43))
 
 ## [1.0.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v1.0.0...v1.0.1) (2024-08-27)
 
-
 ### Bug Fixes
 
-* **eslint:** forbid console statement ([#7](https://github.com/pasteltech/pastel-ts-coding-standard/issues/7)) ([2d262c1](https://github.com/pasteltech/pastel-ts-coding-standard/commit/2d262c178420da3a061d41df2c4bc67973bfa161))
-* **eslint:** relax naming convention ([#5](https://github.com/pasteltech/pastel-ts-coding-standard/issues/5)) ([9218e85](https://github.com/pasteltech/pastel-ts-coding-standard/commit/9218e85d251eac2b69c87e9219794cedbb3e091c))
-
+- **eslint:** forbid console statement ([#7](https://github.com/pasteltech/pastel-ts-coding-standard/issues/7)) ([2d262c1](https://github.com/pasteltech/pastel-ts-coding-standard/commit/2d262c178420da3a061d41df2c4bc67973bfa161))
+- **eslint:** relax naming convention ([#5](https://github.com/pasteltech/pastel-ts-coding-standard/issues/5)) ([9218e85](https://github.com/pasteltech/pastel-ts-coding-standard/commit/9218e85d251eac2b69c87e9219794cedbb3e091c))
 
 ### Features
 
-* **eslint:** allow unused underscore ([#6](https://github.com/pasteltech/pastel-ts-coding-standard/issues/6)) ([7aa8b5a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/7aa8b5a5e07184b4087958a8a0af2ca70c0c6ade))
-
-
-
-
+- **eslint:** allow unused underscore ([#6](https://github.com/pasteltech/pastel-ts-coding-standard/issues/6)) ([7aa8b5a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/7aa8b5a5e07184b4087958a8a0af2ca70c0c6ade))
 
 # [1.0.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v0.6.2...v1.0.0) (2024-05-17)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-base
 
-
-
-
-
 ## [0.6.2](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v0.6.1...v0.6.2) (2024-05-17)
-
 
 ### Bug Fixes
 
-* **eslint-config-base:** correct invalid pattern on eslint extraneous dependencies rule ([#3](https://github.com/pasteltech/pastel-ts-coding-standard/issues/3)) ([a94d8ae](https://github.com/pasteltech/pastel-ts-coding-standard/commit/a94d8aefd4e2c86a5ce67578ee5d847a478230b9))
-
-
-
-
+- **eslint-config-base:** correct invalid pattern on eslint extraneous dependencies rule ([#3](https://github.com/pasteltech/pastel-ts-coding-standard/issues/3)) ([a94d8ae](https://github.com/pasteltech/pastel-ts-coding-standard/commit/a94d8aefd4e2c86a5ce67578ee5d847a478230b9))
 
 # [0.6.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/v0.5.0...v0.6.0) (2024-05-17)
 
-
 ### Features
 
-* update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/pastel-ts-coding-standard/commit/c477663063c38160d665045c148122fd80e169ac))
-
-
-
-
+- update tsconfig with reference to latest boilerplates ([c477663](https://github.com/pasteltech/pastel-ts-coding-standard/commit/c477663063c38160d665045c148122fd80e169ac))
 
 # 0.5.0 (2024-05-17)
 
-
 ### Bug Fixes
 
-* **eslint-config:** remove jest ([11de05a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/11de05ab9af90e04fd47fe14cd590c4983e87220))
-* **eslint-config:** update eslint-import-plugin for typescript support ([ae94397](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae94397dbbb5b700b17d493b8f21c62ce4acc0e5))
-
+- **eslint-config:** remove jest ([11de05a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/11de05ab9af90e04fd47fe14cd590c4983e87220))
+- **eslint-config:** update eslint-import-plugin for typescript support ([ae94397](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae94397dbbb5b700b17d493b8f21c62ce4acc0e5))
 
 ### Features
 
-* add initial configurations ([fdb0d58](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
-* add no-else-return rule ([fe60d61](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fe60d61b7033ab359da5c04f2462c14dd5c1606a))
-* **eslint:** disable rule class-methods-use-this ([6a3c247](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6a3c24735ab89d807262d0ac8da8f23e014d378f))
-
-
-
-
+- add initial configurations ([fdb0d58](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
+- add no-else-return rule ([fe60d61](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fe60d61b7033ab359da5c04f2462c14dd5c1606a))
+- **eslint:** disable rule class-methods-use-this ([6a3c247](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6a3c24735ab89d807262d0ac8da8f23e014d378f))
 
 # [0.3.0](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@0.2.0...@pasteltech/eslint-config-base@0.3.0) (2023-12-11)
 
-
 ### Features
 
-* **eslint:** disable rule class-methods-use-this ([6a3c247](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6a3c24735ab89d807262d0ac8da8f23e014d378f))
-
-
-
-
+- **eslint:** disable rule class-methods-use-this ([6a3c247](https://github.com/pasteltech/pastel-ts-coding-standard/commit/6a3c24735ab89d807262d0ac8da8f23e014d378f))
 
 # 0.2.0 (2023-08-02)
 
-
 ### Bug Fixes
 
-* **eslint-config:** remove jest ([11de05a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/11de05ab9af90e04fd47fe14cd590c4983e87220))
-* **eslint-config:** update eslint-import-plugin for typescript support ([ae94397](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae94397dbbb5b700b17d493b8f21c62ce4acc0e5))
-
+- **eslint-config:** remove jest ([11de05a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/11de05ab9af90e04fd47fe14cd590c4983e87220))
+- **eslint-config:** update eslint-import-plugin for typescript support ([ae94397](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae94397dbbb5b700b17d493b8f21c62ce4acc0e5))
 
 ### Features
 
-* add initial configurations ([fdb0d58](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
-* add no-else-return rule ([fe60d61](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fe60d61b7033ab359da5c04f2462c14dd5c1606a))
-
-
-
-
+- add initial configurations ([fdb0d58](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
+- add no-else-return rule ([fe60d61](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fe60d61b7033ab359da5c04f2462c14dd5c1606a))
 
 ## [0.1.3](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@0.1.2...@pasteltech/eslint-config-base@0.1.3) (2023-03-28)
 
-
 ### Bug Fixes
 
-* **eslint-config:** remove jest ([11de05a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/11de05ab9af90e04fd47fe14cd590c4983e87220))
-
-
-
-
+- **eslint-config:** remove jest ([11de05a](https://github.com/pasteltech/pastel-ts-coding-standard/commit/11de05ab9af90e04fd47fe14cd590c4983e87220))
 
 ## [0.1.2](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@0.1.1...@pasteltech/eslint-config-base@0.1.2) (2023-03-28)
 
-
 ### Bug Fixes
 
-* **eslint-config:** update eslint-import-plugin for typescript support ([ae94397](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae94397dbbb5b700b17d493b8f21c62ce4acc0e5))
-
-
-
-
+- **eslint-config:** update eslint-import-plugin for typescript support ([ae94397](https://github.com/pasteltech/pastel-ts-coding-standard/commit/ae94397dbbb5b700b17d493b8f21c62ce4acc0e5))
 
 ## [0.1.1](https://github.com/pasteltech/pastel-ts-coding-standard/compare/@pasteltech/eslint-config-base@0.1.0...@pasteltech/eslint-config-base@0.1.1) (2023-03-22)
 
 **Note:** Version bump only for package @pasteltech/eslint-config-base
 
-
-
-
-
 # 0.1.0 (2023-03-20)
-
 
 ### Features
 
-* add initial configurations ([fdb0d58](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
+- add initial configurations ([fdb0d58](https://github.com/pasteltech/pastel-ts-coding-standard/commit/fdb0d58d7a0bb85c80851aede7756b59a416f528))
