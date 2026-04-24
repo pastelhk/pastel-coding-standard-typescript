@@ -13,9 +13,9 @@ export default [
   prettier,
   {
     ignores: [
-      '**/dist',
-      '**/node_modules',
-      'coverage/*',
+      '**/dist/**',
+      '**/node_modules/**',
+      '**/coverage/**',
       '**/vite.config.ts',
       '**/webpack.config.js',
       '**/babel.config.js',
