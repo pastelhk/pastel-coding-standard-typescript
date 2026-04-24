@@ -3,7 +3,7 @@ import recommended from './recommended.mjs'
 
 export default {
   meta: {
-    name: '@pasteltech/eslint-config-nextjs',
+    name: '@pasteltech/eslint-config-react-native',
     version: pkg.version,
   },
   configs: {
