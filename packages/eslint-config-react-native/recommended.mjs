@@ -1,9 +1,22 @@
 import react from '@pasteltech/eslint-config-react'
 import reactNative from 'eslint-plugin-react-native'
+import globals from 'globals'
 
 export default [
   ...react.configs.recommended,
   {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        __DEV__: false,
+        __fbBatchedBridgeConfig: false,
+        ErrorUtils: false,
+        // Disable browser-only globals inherited via react preset.
+        window: 'off',
+        document: 'off',
+      },
+    },
+
     plugins: {
       'react-native': reactNative,
     },
