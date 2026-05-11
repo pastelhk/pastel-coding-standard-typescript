@@ -3,6 +3,7 @@ import airbnb from '@pasteltech/eslint-config-airbnb-base'
 import airbnbTypescript from '@pasteltech/eslint-config-airbnb-typescript'
 import importPlugin from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier/recommended'
+import unicorn from 'eslint-plugin-unicorn'
 
 export default [
   js.configs.recommended,
@@ -10,6 +11,19 @@ export default [
   importPlugin.flatConfigs.typescript,
   ...airbnb.configs.base,
   ...airbnbTypescript.configs.base,
+  unicorn.configs.recommended,
+  {
+    rules: {
+      // Breaks Express/NestJS handler signatures: req, res, err, ctx etc. are idiomatic
+      'unicorn/prevent-abbreviations': 'off',
+      // null is used by contract in many APIs (ORMs, JSON, library return types)
+      'unicorn/no-null': 'off',
+      // .reduce() is idiomatic for building objects, summing, and transforming; judge case-by-case
+      'unicorn/no-array-reduce': 'off',
+      // Enforce kebab-case for all files across all platforms (avoids case-sensitivity bugs on macOS/Windows)
+      'unicorn/filename-case': ['error', { case: 'kebabCase' }],
+    },
+  },
   prettier,
   {
     ignores: [

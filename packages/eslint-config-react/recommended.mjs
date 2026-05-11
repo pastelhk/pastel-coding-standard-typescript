@@ -58,15 +58,6 @@ export default [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
 
-      'no-restricted-syntax': [
-        'error',
-        {
-          selector: "MemberExpression[property.name='at']",
-          message:
-            '.at is not available in older version of browsers. Use bracket notation instead',
-        },
-      ],
-
       'import/no-internal-modules': [
         'error',
         {

@@ -19,7 +19,7 @@
     "globals": "^15.14.0"
   },
   "peerDependencies": {
-    "eslint": "^9.34.0 || >=10",
+    "eslint": "^9.38.0 || >=10",
     "eslint-plugin-import": "^2.31.0 || >=3.0.0"
   },
   "devDependencies": {
