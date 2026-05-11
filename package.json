@@ -24,7 +24,7 @@
     "lint": "npm run lint --workspaces --if-present",
     "postinstall": "patch-package",
     "postversion": "npm run postversion --workspaces --if-present",
-    "publish": "changeset publish --use-npmrc .npmrc",
+    "publish": "changeset publish",
     "version": "changeset version && npm install --package-lock-only"
   },
   "prettier": "@pasteltech/prettierrc",
