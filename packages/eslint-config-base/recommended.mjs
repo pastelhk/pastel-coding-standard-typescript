@@ -3,6 +3,7 @@ import airbnb from '@pasteltech/eslint-config-airbnb-base'
 import airbnbTypescript from '@pasteltech/eslint-config-airbnb-typescript'
 import importPlugin from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier/recommended'
+import sonarjs from 'eslint-plugin-sonarjs'
 import unicorn from 'eslint-plugin-unicorn'
 
 export default [
@@ -22,6 +23,28 @@ export default [
       'unicorn/no-array-reduce': 'off',
       // Enforce kebab-case for all files across all platforms (avoids case-sensitivity bugs on macOS/Windows)
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
+    },
+  },
+  sonarjs.configs.recommended,
+  {
+    rules: {
+      // sonarjs/no-nested-conditional supersedes no-nested-ternary; keeping both
+      // causes unicorn/prefer-ternary auto-fix to produce unfixable nested-ternary errors.
+      'no-nested-ternary': 'off',
+
+      // Defer to @typescript-eslint/no-unused-vars which has our custom ^_ ignore pattern.
+      // sonarjs version does not honour that pattern and double-reports the same symbol.
+      'sonarjs/no-unused-vars': 'off',
+
+      // Already enforced by no-fallthrough in js.configs.recommended.
+      'sonarjs/no-fallthrough': 'off',
+
+      // Defer to no-param-reassign which is configured with ignorePropertyModificationsFor.
+      // sonarjs version does not honour the 'self' exception.
+      'sonarjs/no-parameter-reassignment': 'off',
+
+      // Already caught by import plugin + TypeScript verbatimModuleSyntax.
+      'sonarjs/unused-import': 'off',
     },
   },
   prettier,
@@ -46,7 +69,6 @@ export default [
 
     rules: {
       'no-console': 'off',
-      'no-nested-ternary': 'error',
       'class-methods-use-this': 'off',
 
       'no-param-reassign': [
