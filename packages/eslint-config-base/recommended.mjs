@@ -52,7 +52,7 @@ export default [
 
       'no-await-in-loop': 'error',
       'no-else-return': 'error',
-      'node/global-require': 'off',
+      'n/global-require': 'off',
       '@stylistic/semi': ['error', 'never'],
 
       '@typescript-eslint/no-empty-function': [
