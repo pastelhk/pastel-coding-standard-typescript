@@ -5,5 +5,8 @@
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "prettierrc.js",
-  "prettier": "./prettierrc.js"
+  "prettier": "./prettierrc.js",
+  "peerDependencies": {
+    "prettier": ">=3.5"
+  }
 }
