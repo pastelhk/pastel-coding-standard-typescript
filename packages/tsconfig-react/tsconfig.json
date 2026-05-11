@@ -8,6 +8,8 @@
 
     "jsx": "react-jsx",
 
+    "erasableSyntaxOnly": true,
+
     "composite": true,
     "declarationMap": true
   },
