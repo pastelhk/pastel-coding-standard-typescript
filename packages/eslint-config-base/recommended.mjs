@@ -2,6 +2,7 @@ import js from '@eslint/js'
 import airbnb from '@pasteltech/eslint-config-airbnb-base'
 import airbnbTypescript from '@pasteltech/eslint-config-airbnb-typescript'
 import importPlugin from 'eslint-plugin-import'
+import perfectionist from 'eslint-plugin-perfectionist'
 import prettier from 'eslint-plugin-prettier/recommended'
 import sonarjs from 'eslint-plugin-sonarjs'
 import unicorn from 'eslint-plugin-unicorn'
@@ -45,6 +46,36 @@ export default [
 
       // Already caught by import plugin + TypeScript verbatimModuleSyntax.
       'sonarjs/unused-import': 'off',
+    },
+  },
+  {
+    plugins: { perfectionist },
+    rules: {
+      // Disable import/order (from airbnb-base) in favour of perfectionist/sort-imports
+      'import/order': 'off',
+
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          type: 'natural',
+          groups: [
+            'builtin',
+            'external',
+            ['internal', 'internal-type'],
+            ['parent', 'parent-type'],
+            ['sibling', 'sibling-type'],
+            ['index', 'index-type'],
+            'object',
+            'unknown',
+          ],
+        },
+      ],
+      'perfectionist/sort-named-imports': ['error', { type: 'natural' }],
+      'perfectionist/sort-named-exports': ['error', { type: 'natural' }],
+      'perfectionist/sort-interfaces': ['error', { type: 'natural' }],
+      'perfectionist/sort-object-types': ['error', { type: 'natural' }],
+      'perfectionist/sort-union-types': ['error', { type: 'natural' }],
+      'perfectionist/sort-enums': ['error', { type: 'natural' }],
     },
   },
   prettier,
