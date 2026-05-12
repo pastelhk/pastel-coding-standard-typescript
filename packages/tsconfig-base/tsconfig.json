@@ -45,8 +45,6 @@
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
     // "types": [],                           /* Type declaration files to be included in compilation. */
-    "allowSyntheticDefaultImports": true /*      Kept for compatibility with legacy tooling that reads this flag. */,
-    // "esModuleInterop" and "isolatedModules" are superseded by "verbatimModuleSyntax" above.
     // "preserveSymlinks": true,              /* Do not resolve the real path of symlinks. */
     "skipLibCheck": true /*                      Skip type checking of declaration files. */,
     "resolveJsonModule": true /*                 Allows importing modules with a ‘.json’ extension, which is a common practice in node projects. */,
