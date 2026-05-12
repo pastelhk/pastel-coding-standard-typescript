@@ -5,6 +5,7 @@
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "exports": {
+    ".": "./tsconfig.json",
     "./tsconfig": "./tsconfig.json",
     "./tsconfig.esm": "./tsconfig.esm.json"
   },
