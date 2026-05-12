@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.0.2
+
+### Patch Changes
+
+- [`7b25913`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/7b25913dc583f8060d91305811fb03ce4a277230) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - feat(tsconfig): configure ESNext module defaults in base config
+
+- Updated dependencies [[`7b25913`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/7b25913dc583f8060d91305811fb03ce4a277230)]:
+  - @pasteltech/tsconfig-base@2.0.2
+
 ## 2.0.1
 
 ### Patch Changes
