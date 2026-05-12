@@ -13,6 +13,7 @@
   "scripts": {
     "build": "npm run -ws --if-present prepare",
     "changeset": "changeset",
+    "audit:eslint-rules": "eslint-find-rules packages/eslint-config-base/recommended.mjs --unused",
     "check:format": "prettier -c .",
     "check:lint": "npm run check:lint --workspaces --if-present",
     "check:packages": "syncpack lint",
