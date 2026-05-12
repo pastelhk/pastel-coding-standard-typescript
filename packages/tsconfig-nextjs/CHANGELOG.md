@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.2.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @pasteltech/tsconfig-react@2.0.2
+
 ## 1.2.2
 
 ### Patch Changes

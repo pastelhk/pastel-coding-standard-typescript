@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.2
+
+### Patch Changes
+
+- Updated dependencies [[`7b25913`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/7b25913dc583f8060d91305811fb03ce4a277230)]:
+  - @pasteltech/tsconfig-node@2.0.2
+
 ## 1.3.1
 
 ### Patch Changes
