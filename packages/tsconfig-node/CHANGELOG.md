@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.3
+
+### Patch Changes
+
+- [`8332c58`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/8332c58e0c3fa31476b1cad5493e2d739c5edcbe) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - refactor(tsconfig-node): Use `node16` module for CJS output and rename config
+
 ## 2.0.2
 
 ### Patch Changes
