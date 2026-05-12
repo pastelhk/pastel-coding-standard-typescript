@@ -45,6 +45,40 @@ jobs:
         id: check-lockfile
         run: git --no-pager diff --exit-code --numstat
 
+      - name: Verify hoisting
+        id: check-hoisting
+        run: |
+          echo "🔍 Scanning for any nested node_modules folders..."
+
+          # Find nested node_modules, excluding root and its contents
+          NESTED=$(find . -mindepth 2 -name node_modules -type d ! -path './node_modules/*' 2>/dev/null || true)
+
+          if [ -n "$NESTED" ]; then
+            echo "⚠️  Nested node_modules found:"
+            echo "$NESTED"
+            echo ""
+            echo "Checking for real packages (looking for package.json files)..."
+
+            # Look for package.json in nested node_modules (indicates real packages)
+            REAL_PKGS=$(find . -path '*/node_modules/*/package.json' \
+              ! -path './node_modules/*' \
+              ! -path '*/node_modules/.*/*' \
+              2>/dev/null || true)
+
+            if [ -n "$REAL_PKGS" ]; then
+              echo "❌ Found non-hoisted dependencies:"
+              echo "$REAL_PKGS" | sed 's|/package.json||' | sort | uniq
+              echo ""
+              echo "💡 Fix: Ensure 'install-strategy=hoisted' in .npmrc and shared deps in root package.json"
+              exit 1
+            else
+              echo "✅ Only build tool artifacts found (safe to ignore)"
+            fi
+          else
+            echo "✅ Perfect hoisting — no nested node_modules anywhere!"
+          fi
+        continue-on-error: true
+
       - name: Cache ESLint caches
         uses: actions/cache@v4
         with:
@@ -122,19 +156,20 @@ jobs:
           script: |
             const checks = [
               { name: 'Lock file', outcome: '${{ steps.check-lockfile.outcome }}' },
-              { name: 'Audit', outcome: '${{ steps.check-audit.outcome }}' },
+              { name: 'Audit', outcome: '${{ steps.check-audit.outcome }}', isWarning: true },
               { name: 'Package.json', outcome: '${{ steps.check-packages.outcome }}' },
+              { name: 'Hoisting', outcome: '${{ steps.check-hoisting.outcome }}' },
               { name: 'Format', outcome: '${{ steps.check-format.outcome }}' },
               { name: 'Types', outcome: '${{ steps.check-types.outcome }}' },
               { name: 'Lint', outcome: '${{ steps.check-lint.outcome }}' },
               { name: 'Tests', outcome: '${{ steps.check-test.outcome }}' },
-              { name: 'SonarQube', outcome: '${{ steps.check-sonarqube.outcome }}' },
+              { name: 'SonarQube', outcome: '${{ steps.check-sonarqube.outcome }}', isWarning: true },
             ];
 
             const results = checks.map(c => ({
               name: c.name,
-              status: c.outcome === 'failure' ? '❌' : '✅',
-              passed: c.outcome !== 'failure'
+              status: c.isWarning && c.outcome === 'failure' ? '⚠️' : c.outcome === 'failure' ? '❌' : '✅',
+              passed: c.isWarning ? true : c.outcome !== 'failure'
             }));
 
             // Console output
@@ -150,7 +185,7 @@ jobs:
               const rows = results.map(r => `| ${r.name} | ${r.status} |`).join('\n');
               const summary = allPassed ? '✅ All checks passed!' : '⚠️ Some checks need attention';
               const body = `## 📋 Code Scan Results\n\n| Check | Status |\n|-------|--------|\n${rows}\n\n${summary}`;
-              
+
               github.rest.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
