@@ -204,14 +204,26 @@ export const recommended = [
 
       'import/no-cycle': 'error',
 
-      // Extend airbnb's no-restricted-syntax keeping all original entries (ForIn, ForOf,
-      // LabeledStatement, WithStatement) — ExportAllDeclaration is now handled by
-      // barrel-files/avoid-re-export-all below which gives a clearer, dedicated error.
+      // Selectively inherit airbnb's no-restricted-syntax: keep ForIn and LabeledStatement;
+      // drop ForOfStatement (regenerator-runtime rationale is obsolete in modern ES modules)
+      // and WithStatement (already a syntax error in strict mode / TypeScript).
+      // Add SequenceExpression (comma operator — almost always a bug) and TSEnumDeclaration
+      // (use `as const` objects instead; enums have numeric footguns and isolatedModules issues).
       'no-restricted-syntax': [
         'error',
-        ...airbnb.configs.style.flatMap(
-          (c) => c.rules?.['no-restricted-syntax']?.slice(1) ?? [],
-        ),
+        ...airbnb.configs.style
+          .flatMap((c) => c.rules?.['no-restricted-syntax']?.slice(1) ?? [])
+          .filter((entry) => entry?.selector !== 'ForOfStatement'),
+        {
+          selector: 'SequenceExpression',
+          message:
+            'The comma operator is almost always a bug. Use separate statements instead.',
+        },
+        {
+          selector: 'TSEnumDeclaration',
+          message:
+            'Avoid TypeScript enums — use `as const` objects instead. Enums have numeric footguns, reverse-mapping overhead, and break with isolatedModules.',
+        },
       ],
 
       // Barrel file prevention — see configs.packageEntry for the opt-in override.
