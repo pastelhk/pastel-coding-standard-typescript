@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies [[`8e35fa3`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/8e35fa321896398cef40d6a8012becb8a284216f), [`3d94e6c`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/3d94e6c0d776dbbf694322a8e7fd67a07ac0f672), [`30bbb96`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/30bbb960975841e4a22dcf34d796cffa80e20f8e), [`84d3b49`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/84d3b49dfbe5eba833748cc33750534b82c3f187), [`911f5c5`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/911f5c5afb655be87b3fa5e1b16a7fede8c815b9), [`cc58c70`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/cc58c70532c96b3baecb40af565ad936b9703a30), [`28e74f2`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/28e74f211f6431acd462109c58870b17c26eccfb), [`f5cc0b4`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/f5cc0b401aee5667f4b407b731e0c185d449781a)]:
+  - @pasteltech/eslint-config-base@2.0.1
+
 ## 2.0.0
 
 ### Major Changes

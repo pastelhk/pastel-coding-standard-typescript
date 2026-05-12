@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.3.1
+
+### Patch Changes
+
+- [`a03620c`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/a03620c3438613583e80592bf869b1a7417e6ea3) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - refactor(tsconfig): streamline package extends and base module options
+
+- Updated dependencies [[`60c8553`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/60c855352b8879c3eeedbafa6ea73c69301226fd), [`a03620c`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/a03620c3438613583e80592bf869b1a7417e6ea3), [`89f8077`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/89f807754e28f6c7c8300e6781d66207489f9044)]:
+  - @pasteltech/tsconfig-node@2.0.1
+
 ## 1.3.0
 
 ### Minor Changes
