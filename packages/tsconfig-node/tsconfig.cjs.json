@@ -2,5 +2,10 @@
   "extends": "@pasteltech/tsconfig-base",
   "compilerOptions": {
     "module": "commonjs",
+    // verbatimModuleSyntax is incompatible with commonjs; override to false and use isolatedModules instead
+    "verbatimModuleSyntax": false,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   }
 }
