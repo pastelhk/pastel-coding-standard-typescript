@@ -5,11 +5,11 @@
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "exports": {
-    ".": "./tsconfig.json",
-    "./tsconfig": "./tsconfig.json",
+    ".": "./tsconfig.cjs.json",
+    "./tsconfig": "./tsconfig.cjs.json",
     "./tsconfig.esm": "./tsconfig.esm.json"
   },
-  "main": "tsconfig.json",
+  "main": "tsconfig.cjs.json",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
     "@pasteltech/tsconfig-base": "2.0.0"

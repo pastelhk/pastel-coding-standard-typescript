@@ -1,5 +1,5 @@
 {
-  "extends": "@pasteltech/tsconfig-base/tsconfig",
+  "extends": "@pasteltech/tsconfig-base",
   "compilerOptions": {
     "module": "ESNext",
     "target": "ES2022",

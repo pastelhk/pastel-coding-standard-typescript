@@ -1,0 +1,6 @@
+{
+  "extends": "@pasteltech/tsconfig-base",
+  "compilerOptions": {
+    "module": "commonjs",
+  }
+}

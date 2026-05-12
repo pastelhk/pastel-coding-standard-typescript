@@ -1,5 +1,5 @@
 {
-  "extends": "@pasteltech/tsconfig-react/tsconfig",
+  "extends": "@pasteltech/tsconfig-react",
   "compilerOptions": {
     "jsx": "preserve",
     "plugins": [
