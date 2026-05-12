@@ -239,12 +239,7 @@ export default [
       'import/no-self-import': 'error',
       'import/namespace': 'off',
 
-      'import/no-cycle': [
-        'error',
-        {
-          maxDepth: 3,
-        },
-      ],
+      'import/no-cycle': 'error',
 
       'import/no-extraneous-dependencies': [
         'error',
