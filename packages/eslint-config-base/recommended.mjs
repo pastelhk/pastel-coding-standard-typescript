@@ -24,6 +24,9 @@ export default [
       'unicorn/no-array-reduce': 'off',
       // Enforce kebab-case for all files across all platforms (avoids case-sensitivity bugs on macOS/Windows)
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
+      // n/global-require is off (dynamic require is allowed); unicorn/prefer-module would
+      // conflict by banning require() at the same time. Keep them in sync.
+      'unicorn/prefer-module': 'off',
     },
   },
   sonarjs.configs.recommended,
@@ -120,7 +123,8 @@ export default [
       'no-await-in-loop': 'error',
       'no-else-return': 'error',
       'n/global-require': 'off',
-      '@stylistic/semi': ['error', 'never'],
+      // @stylistic/semi is intentionally omitted: eslint-config-prettier (bundled with
+      // eslint-plugin-prettier/recommended) disables it; Prettier owns semicolon formatting.
 
       '@typescript-eslint/no-empty-function': [
         'error',
@@ -206,6 +210,11 @@ export default [
 
       '@typescript-eslint/prefer-optional-chain': ['error'],
       '@typescript-eslint/prefer-nullish-coalescing': ['error'],
+      // Warn rather than error: there are legitimate any escape hatches (third-party types,
+      // gradual migration), but unreviewed any defeats TypeScript's purpose.
+      '@typescript-eslint/no-explicit-any': 'warn',
+      // The ! operator suppresses nullability checks; a warning prompts explicit handling.
+      '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/consistent-type-imports': [
         'error',
         { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
