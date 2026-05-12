@@ -12,6 +12,17 @@ export const recommended = [
   importPlugin.flatConfigs.typescript,
   ...airbnb.configs.base,
   ...airbnbTypescript.configs.base,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: {
+          // Allow files not covered by any tsconfig (e.g. eslint.config.mjs, *.cjs)
+          // to be parsed using a default project so type-aware rules still apply.
+          allowDefaultProject: ['*.js', '*.mjs', '*.cjs'],
+        },
+      },
+    },
+  },
   unicorn.configs.recommended,
   {
     rules: {
@@ -31,6 +42,7 @@ export const recommended = [
   prettier,
   {
     ignores: [
+      '**/*.json',
       '**/dist/**',
       '**/node_modules/**',
       '**/coverage/**',
