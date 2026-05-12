@@ -135,8 +135,6 @@ export default [
         },
       ],
 
-      '@typescript-eslint/explicit-member-accessibility': 'error',
-
       '@typescript-eslint/naming-convention': [
         'error',
         {
