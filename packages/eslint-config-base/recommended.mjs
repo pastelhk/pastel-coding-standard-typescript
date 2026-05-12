@@ -99,7 +99,7 @@ export default [
     },
 
     rules: {
-      'no-console': 'off',
+      'no-console': 'warn',
       'class-methods-use-this': 'off',
 
       'no-param-reassign': [
@@ -206,7 +206,6 @@ export default [
         },
       ],
 
-      '@typescript-eslint/no-var-requires': 'error',
       '@typescript-eslint/prefer-optional-chain': ['error'],
       '@typescript-eslint/prefer-nullish-coalescing': ['error'],
 
