@@ -188,6 +188,9 @@ export const recommended = [
           ignoreIIFE: true,
         },
       ],
+      // Allow `void promise()` as the explicit fire-and-forget escape hatch for
+      // @typescript-eslint/no-floating-promises. Without this the two rules conflict.
+      'no-void': ['error', { allowAsStatement: true }],
 
       'import/prefer-default-export': 'off',
       'import/no-default-export': 'error',
