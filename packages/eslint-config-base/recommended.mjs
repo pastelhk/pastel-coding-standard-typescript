@@ -260,4 +260,12 @@ export const recommended = [
       '@typescript-eslint/naming-convention': 'off',
     },
   },
+  {
+    files: ['**/*.test.*', '**/*.spec.*', '**/__tests__/**'],
+    rules: {
+      // Inline helper functions colocated with their test are intentional and improve
+      // readability. Moving them to module scope would scatter context away from the test.
+      'unicorn/consistent-function-scoping': 'off',
+    },
+  },
 ]
