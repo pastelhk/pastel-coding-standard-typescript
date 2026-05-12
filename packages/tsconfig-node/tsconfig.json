@@ -1,12 +1,11 @@
 {
   "extends": "@pasteltech/tsconfig-base",
   "compilerOptions": {
+    // node16 + node16 must be paired; output is CJS when package.json omits "type" or sets "type": "commonjs"
     "module": "node16",
     "moduleResolution": "node16",
     // verbatimModuleSyntax is incompatible with commonjs; override to false and use isolatedModules instead
     "verbatimModuleSyntax": false,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "isolatedModules": true
   }
 }
