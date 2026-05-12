@@ -1,6 +1,7 @@
 import js from '@eslint/js'
 import airbnb from '@pasteltech/eslint-config-airbnb-base'
 import airbnbTypescript from '@pasteltech/eslint-config-airbnb-typescript'
+import barrelFiles from 'eslint-plugin-barrel-files'
 import importPlugin from 'eslint-plugin-import'
 import perfectionist from 'eslint-plugin-perfectionist'
 import prettier from 'eslint-plugin-prettier/recommended'
