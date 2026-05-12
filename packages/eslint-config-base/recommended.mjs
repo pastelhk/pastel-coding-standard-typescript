@@ -7,7 +7,7 @@ import prettier from 'eslint-plugin-prettier/recommended'
 import sonarjs from 'eslint-plugin-sonarjs'
 import unicorn from 'eslint-plugin-unicorn'
 
-export default [
+export const recommended = [
   js.configs.recommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,

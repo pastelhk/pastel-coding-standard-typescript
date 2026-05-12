@@ -1,7 +1,7 @@
 import base from '@pasteltech/eslint-config-base'
 import globals from 'globals'
 
-export default [
+export const recommended = [
   ...base.configs.recommended,
   {
     languageOptions: {

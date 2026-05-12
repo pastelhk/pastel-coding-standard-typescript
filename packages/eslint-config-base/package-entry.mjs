@@ -20,7 +20,7 @@ import barrelFiles from 'eslint-plugin-barrel-files'
  * - `barrel-files/avoid-re-export-all` is turned off (`export * from` is allowed)
  * - `no-restricted-syntax` drops ExportAllDeclaration while keeping all airbnb entries
  */
-export default [
+export const packageEntry = [
   {
     files: ['**/index.ts', '**/index.mjs', '**/index.js'],
     plugins: {

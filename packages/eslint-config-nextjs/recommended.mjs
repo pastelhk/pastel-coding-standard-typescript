@@ -17,7 +17,7 @@ const nextDefaultExportFilenames = [
   'unauthorized',
 ]
 
-export default [
+export const recommended = [
   {
     ...next.configs.recommended,
     plugins: {

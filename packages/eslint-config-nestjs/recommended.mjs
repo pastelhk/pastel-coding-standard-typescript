@@ -1,6 +1,6 @@
 import node from '@pasteltech/eslint-config-node'
 
-export default [
+export const recommended = [
   ...node.configs.recommended,
   {
     rules: {

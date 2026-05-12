@@ -4,7 +4,7 @@ import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
-export default [
+export const recommended = [
   react.configs.flat.recommended,
   ...airbnb.configs.react,
   ...base.configs.recommended,

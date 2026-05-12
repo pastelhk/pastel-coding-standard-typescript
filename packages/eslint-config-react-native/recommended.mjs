@@ -2,7 +2,7 @@ import react from '@pasteltech/eslint-config-react'
 import reactNative from 'eslint-plugin-react-native'
 import globals from 'globals'
 
-export default [
+export const recommended = [
   ...react.configs.recommended,
   {
     languageOptions: {

@@ -1,6 +1,6 @@
-import packageEntry from './package-entry.mjs'
+import { packageEntry } from './package-entry.mjs'
 import pkg from './package.json' with { type: 'json' }
-import recommended from './recommended.mjs'
+import { recommended } from './recommended.mjs'
 
 export default {
   meta: {
