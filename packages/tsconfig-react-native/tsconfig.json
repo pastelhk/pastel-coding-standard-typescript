@@ -2,7 +2,7 @@
   "extends": "@pasteltech/tsconfig-react/tsconfig",
   "compilerOptions": {
     "target": "esnext",
-    "module": "es2015",
+    "module": "esnext",
     "types": ["react-native"],
     "lib": ["ES2022"],
     "customConditions": ["react-native"],
