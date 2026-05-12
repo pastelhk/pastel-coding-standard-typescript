@@ -1,12 +1,12 @@
 {
   "name": "@pasteltech/eslint-config-nestjs",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Eslint config",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "index.mjs",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/eslint-config-node": "2.0.0"
+    "@pasteltech/eslint-config-node": "2.0.1"
   }
 }
