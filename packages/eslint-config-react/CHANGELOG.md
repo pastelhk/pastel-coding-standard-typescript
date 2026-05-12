@@ -1,5 +1,43 @@
 # Change Log
 
+## 1.3.2
+
+### Patch Changes
+
+- [`7838b74`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/7838b74d9213fd61c628ef53b12092aed4671399) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Convert internal `recommended.mjs` and `package-entry.mjs` files to named exports.
+
+  The `import/no-default-export` rule (enforced in `recommended`) applies to all project source files. These are internal modules consumed only by their own `index.mjs` — not public entry points — so they should follow the same convention.
+
+  Each `index.mjs` (the public default export) is updated to use a named import:
+
+  ```js
+  // before
+  import recommended from './recommended.mjs'
+
+  // after
+  import { recommended } from './recommended.mjs'
+  ```
+
+  The public `export default { configs: { recommended } }` shape in each `index.mjs` is unchanged — no impact on consumers.
+
+- [`b3bb0f9`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/b3bb0f9a3fc8fe337e2a1eafa0cb66fa489be122) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Move `eslint-plugin-jsx-a11y` from `eslint-config-base` to `eslint-config-react`. The base config has no JSX rules; jsx-a11y is only consumed via the `@pasteltech/eslint-config-airbnb` React rules, which are only loaded by the react preset.
+
+- [`1ec0cb6`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/1ec0cb6e8a153097a18a0a4a2f9e36771914cb91) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Use modern module parser defaults for React preset.
+
+- [`9e9fb79`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/9e9fb79bfe9026bdcb26410bd1293a36ebfc2b0d) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Pin `@pasteltech/eslint-config-airbnb` dependency to exact version per workspace syncpack policy. All other workspace cross-references use exact versions.
+
+- [`9caacc5`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/9caacc509b8e0a06102c08d8c34abf609e123945) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Turn off `import/no-internal-modules` and remove its per-package allow-list overrides.
+
+  **Why**: The rule was intended to prevent deep imports into third-party packages, but it achieves the opposite effect in practice — it forces barrel `index.ts` files in application code, which is an antipattern (harms tree-shaking, promotes circular dependencies, slows builds).
+
+  The correct mechanism for protecting a **published package's** public API is the `"exports"` field in `package.json`. Node.js and TypeScript both enforce it natively for all consumers in all repos — not just within this repo's ESLint scope.
+
+  **Migration**: Remove any `import/no-internal-modules` overrides from your project's ESLint config. Use `"exports"` in `package.json` to declare what is and isn't part of your public API.
+
+- Updated dependencies [[`9bf5fea`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/9bf5feadd7de265ccdfbfe64ff9b18181d6e7a1b), [`ebf6996`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/ebf6996e439fb8d2af2b42b4f016342cab392ca1), [`ee7c5cc`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/ee7c5cca39938f751f5528e9b25fa4ba1b6c26d0), [`bf432b7`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/bf432b77f64e9df9f4f1690dac148f4a868f192b), [`c77d624`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/c77d6248d8507c0d5be22340f07df436b3a760f3), [`711a0a9`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/711a0a96e3d769c67fcbf1dddf668e4c62d0fa4b), [`c77d624`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/c77d6248d8507c0d5be22340f07df436b3a760f3), [`73c9ca5`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/73c9ca51051aa24aec9e9c4ee84db55de79f020f), [`2308273`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/2308273448e93501f5a6869d0e4f40c19ee848ce), [`e6c20d9`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/e6c20d9eb142347d0338cfdc5203dce2c77f8e34), [`68bf23d`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/68bf23da57ff205b75be3da803c4649cdab27cfc), [`5820794`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/5820794edade6b821d2036b620670e414288f069), [`7838b74`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/7838b74d9213fd61c628ef53b12092aed4671399), [`b3bb0f9`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/b3bb0f9a3fc8fe337e2a1eafa0cb66fa489be122), [`96a9fb2`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/96a9fb24b3f5736d30d91e01474dcae40f9db43a), [`e06c37d`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/e06c37d0b8bc1eda3c57a6238304221e635da2b1), [`cf27771`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/cf277718433579ba3267e0b9537c349f0411a28f), [`1aa72d2`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/1aa72d29bdd181b7b27f0433ff87df5847bf6304), [`8385057`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/83850576ee884ac189e0c701d98b45ace73f90d3), [`9caacc5`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/9caacc509b8e0a06102c08d8c34abf609e123945)]:
+  - @pasteltech/eslint-config-base@2.0.0
+  - @pasteltech/eslint-config-airbnb@20.1.2
+
 ## 1.3.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @pasteltech/eslint-config-airbnb
 
+## 20.1.2
+
+### Patch Changes
+
+- [`73c9ca5`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/73c9ca51051aa24aec9e9c4ee84db55de79f020f) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Align `eslint` peer dependency minimum from `^9.18.0` to `^9.38.0` to match `eslint-config-airbnb-base` and `eslint-config-base`. Syncpack `sameRange` peer policy requires all peers to agree.
+
 ## 20.1.1
 
 ### Patch Changes

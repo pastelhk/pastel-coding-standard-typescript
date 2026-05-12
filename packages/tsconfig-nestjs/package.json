@@ -1,12 +1,12 @@
 {
   "name": "@pasteltech/tsconfig-nestjs",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "TypeScript config for Nestjs applications",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "main": "tsconfig.json",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@pasteltech/tsconfig-node": "1.2.0"
+    "@pasteltech/tsconfig-node": "2.0.0"
   }
 }
