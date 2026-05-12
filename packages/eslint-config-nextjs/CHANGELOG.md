@@ -1,5 +1,48 @@
 # Change Log
 
+## 1.3.2
+
+### Patch Changes
+
+- [`7838b74`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/7838b74d9213fd61c628ef53b12092aed4671399) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Convert internal `recommended.mjs` and `package-entry.mjs` files to named exports.
+
+  The `import/no-default-export` rule (enforced in `recommended`) applies to all project source files. These are internal modules consumed only by their own `index.mjs` — not public entry points — so they should follow the same convention.
+
+  Each `index.mjs` (the public default export) is updated to use a named import:
+
+  ```js
+  // before
+  import recommended from './recommended.mjs'
+
+  // after
+  import { recommended } from './recommended.mjs'
+  ```
+
+  The public `export default { configs: { recommended } }` shape in each `index.mjs` is unchanged — no impact on consumers.
+
+- [`8fc1fbc`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/8fc1fbc7de91343327fd790f951f2712c2e1ad7d) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Broaden the default-export file override in the Next.js preset.
+  - **Add Next 15 special files**: `forbidden.tsx` and `unauthorized.tsx` were introduced in Next.js 15 as new App Router conventions; they require a default export but were missing from the allowlist.
+  - **Cover projects without `src/`**: The glob `src/app/**/{file}.tsx` only matched projects using a `src` directory. Add a parallel `app/**/{file}.tsx` pattern so teams that put `app/` at the repository root also get the override.
+
+- [`c9e4db7`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/c9e4db7034734a7b1dbe82dfd243133163a928cd) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Add `loading` to the Next.js App Router default-export filename allowlist so `loading.tsx` files correctly receive the `import/prefer-default-export` override.
+
+- [`5186634`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/51866341dfd6ed4f8a0f5e60ad333ca4db6daecb) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Fix i18n config filename glob (`18nConfig` → `i18nConfig`) in Next.js preset and correct React Native preset meta package name.
+
+- [`e359c05`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/e359c05d10edfab251f612e5234a5bb762febae2) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Remove organisation-internal references from shared public presets.
+  - **react-native**: Remove `react-i18next → @pastellink/i18n-react` restriction. This rule referenced a private org package, making the shared config non-portable for teams not using that package.
+  - **nextjs**: Remove `i18nConfig.ts` from the default-export file allowlist. This was a project-specific filename that leaked into the shared standard.
+
+- [`9caacc5`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/9caacc509b8e0a06102c08d8c34abf609e123945) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - Turn off `import/no-internal-modules` and remove its per-package allow-list overrides.
+
+  **Why**: The rule was intended to prevent deep imports into third-party packages, but it achieves the opposite effect in practice — it forces barrel `index.ts` files in application code, which is an antipattern (harms tree-shaking, promotes circular dependencies, slows builds).
+
+  The correct mechanism for protecting a **published package's** public API is the `"exports"` field in `package.json`. Node.js and TypeScript both enforce it natively for all consumers in all repos — not just within this repo's ESLint scope.
+
+  **Migration**: Remove any `import/no-internal-modules` overrides from your project's ESLint config. Use `"exports"` in `package.json` to declare what is and isn't part of your public API.
+
+- Updated dependencies [[`7838b74`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/7838b74d9213fd61c628ef53b12092aed4671399), [`b3bb0f9`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/b3bb0f9a3fc8fe337e2a1eafa0cb66fa489be122), [`1ec0cb6`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/1ec0cb6e8a153097a18a0a4a2f9e36771914cb91), [`9e9fb79`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/9e9fb79bfe9026bdcb26410bd1293a36ebfc2b0d), [`9caacc5`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/9caacc509b8e0a06102c08d8c34abf609e123945)]:
+  - @pasteltech/eslint-config-react@1.3.2
+
 ## 1.3.1
 
 ### Patch Changes
