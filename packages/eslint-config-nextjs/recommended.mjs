@@ -4,6 +4,7 @@ import react from '@pasteltech/eslint-config-react'
 const nextDefaultExportFilenames = [
   'default',
   'error',
+  'forbidden',
   'instrumentation',
   'layout',
   'loading',
@@ -13,6 +14,7 @@ const nextDefaultExportFilenames = [
   'page',
   'route',
   'template',
+  'unauthorized',
 ]
 
 export default [
@@ -45,7 +47,10 @@ export default [
   },
   {
     files: [
+      // src/app/** layout for projects using the src directory
       ...nextDefaultExportFilenames.map((it) => `src/app/**/${it}.tsx`),
+      // app/** layout for projects without a src directory
+      ...nextDefaultExportFilenames.map((it) => `app/**/${it}.tsx`),
       '**/next.config.*',
     ],
 
