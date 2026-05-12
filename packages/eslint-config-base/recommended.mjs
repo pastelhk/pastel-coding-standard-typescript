@@ -1,9 +1,9 @@
 import js from '@eslint/js'
 import airbnb from '@pasteltech/eslint-config-airbnb-base'
 import airbnbTypescript from '@pasteltech/eslint-config-airbnb-typescript'
+import prettier from 'eslint-config-prettier/flat'
 import barrelFiles from 'eslint-plugin-barrel-files'
 import importPlugin from 'eslint-plugin-import'
-import prettier from 'eslint-plugin-prettier/recommended'
 import unicorn from 'eslint-plugin-unicorn'
 
 export const recommended = [
