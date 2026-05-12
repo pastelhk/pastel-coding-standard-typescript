@@ -2,6 +2,7 @@
   "extends": "@pasteltech/tsconfig-base",
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node16",
     // verbatimModuleSyntax is incompatible with commonjs; override to false and use isolatedModules instead
     "verbatimModuleSyntax": false,
     "isolatedModules": true,

@@ -4,8 +4,9 @@
 
     /* Basic Options */
     "target": "esnext" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */,
-    // "module" is intentionally omitted here; each consuming config sets its own
-    // (commonjs for tsconfig-node/nestjs, ESNext for tsconfig-react, nodenext for tsconfig-node/esm).
+    // Default: ESNext + bundler — the most universal pair for libraries shared across Node.js, React, and Next.js.
+    // Override in environment-specific configs:
+    "module": "ESNext",
     "lib": [
       "esnext"
     ] /* Specify library files to be included in the compilation. */,
@@ -40,8 +41,9 @@
     "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
 
     /* Module Resolution Options */
-    // "moduleResolution" is intentionally omitted here; it must be paired with "module" and each
-    // consuming config sets its own (node16 for tsconfig-node, bundler for tsconfig-react, nodenext for tsconfig-node/esm).
+    // Default: bundler — pairs with module:ESNext; permits extensionless imports which bundlers resolve.
+    // Node.js consumers MUST override to node16 (CJS) or nodenext (ESM) since Node requires explicit .js extensions.
+    "moduleResolution": "bundler",
     // "baseUrl": "./",                       /* Base directory to resolve non-absolute module names. */
     // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
