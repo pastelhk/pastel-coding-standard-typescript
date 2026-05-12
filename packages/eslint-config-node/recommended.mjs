@@ -9,14 +9,5 @@ export default [
         ...globals.node,
       },
     },
-
-    rules: {
-      'unicorn/filename-case': [
-        'error',
-        {
-          case: 'kebabCase',
-        },
-      ],
-    },
   },
 ]
