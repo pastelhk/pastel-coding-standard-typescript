@@ -57,13 +57,6 @@ export default [
 
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
-
-      'import/no-internal-modules': [
-        'error',
-        {
-          allow: ['@mui/**', '@hookform/**', 'react-dom/*'],
-        },
-      ],
     },
   },
 ]

@@ -30,22 +30,6 @@ export default [
   },
   ...react.configs.recommended,
   {
-    rules: {
-      'import/no-internal-modules': [
-        'error',
-        {
-          allow: [
-            '@mui/**',
-            '@hookform/**',
-            'react-dom/*',
-            'next/**',
-            'next-i18n-router/**',
-          ],
-        },
-      ],
-    },
-  },
-  {
     files: [
       // src/app/** layout for projects using the src directory
       ...nextDefaultExportFilenames.map((it) => `src/app/**/${it}.tsx`),

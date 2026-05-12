@@ -233,7 +233,10 @@ export default [
       'import/prefer-default-export': 'off',
       'import/no-default-export': 'error',
       'import/no-anonymous-default-export': 'error',
-      'import/no-internal-modules': 'error',
+      // Turned off: use package.json "exports" field to enforce public API boundaries
+      // for published packages (Node + TypeScript enforce it for all consumers).
+      // Keeping this on forces barrel exports in app code, which is an antipattern.
+      'import/no-internal-modules': 'off',
       'import/no-self-import': 'error',
       'import/namespace': 'off',
 

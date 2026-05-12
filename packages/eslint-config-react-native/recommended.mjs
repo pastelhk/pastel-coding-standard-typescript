@@ -29,13 +29,6 @@ export default [
     },
 
     rules: {
-      'import/no-internal-modules': [
-        'error',
-        {
-          allow: ['styled-components/native', '@hookform/**'],
-        },
-      ],
-
       'react-native/no-inline-styles': 'error',
       'react-native/no-single-element-style-arrays': 'error',
 
