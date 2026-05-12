@@ -6,6 +6,7 @@ const nextDefaultExportFilenames = [
   'error',
   'instrumentation',
   'layout',
+  'loading',
   'mdx-components',
   'middleware',
   'not-found',
