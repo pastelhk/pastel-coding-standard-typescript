@@ -69,11 +69,6 @@ export default [
               message:
                 'Avoid using Touchables from react-native-gesture-handler',
             },
-            {
-              name: 'react-i18next',
-              importNames: ['useTranslation'],
-              message: 'Use useTranslation from @pastellink/i18n-react ',
-            },
           ],
         },
       ],

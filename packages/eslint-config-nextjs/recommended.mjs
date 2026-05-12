@@ -47,7 +47,6 @@ export default [
     files: [
       ...nextDefaultExportFilenames.map((it) => `src/app/**/${it}.tsx`),
       '**/next.config.*',
-      '**/i18nConfig.ts',
     ],
 
     rules: {
