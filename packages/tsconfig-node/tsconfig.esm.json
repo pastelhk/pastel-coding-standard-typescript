@@ -1,4 +1,7 @@
 {
+  // NOTE: Do NOT use this config for NestJS projects.
+  // emitDecoratorMetadata (required by NestJS's DI system) is incompatible with
+  // erasableSyntaxOnly. NestJS projects must continue to use tsconfig.json (CJS).
   "extends": "@pasteltech/tsconfig-base/tsconfig",
   "compilerOptions": {
     "module": "nodenext",
