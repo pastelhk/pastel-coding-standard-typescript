@@ -4,7 +4,6 @@ import airbnbTypescript from '@pasteltech/eslint-config-airbnb-typescript'
 import barrelFiles from 'eslint-plugin-barrel-files'
 import importPlugin from 'eslint-plugin-import'
 import prettier from 'eslint-plugin-prettier/recommended'
-import sonarjs from 'eslint-plugin-sonarjs'
 import unicorn from 'eslint-plugin-unicorn'
 
 export const recommended = [
@@ -27,28 +26,6 @@ export const recommended = [
       // n/global-require is off (dynamic require is allowed); unicorn/prefer-module would
       // conflict by banning require() at the same time. Keep them in sync.
       'unicorn/prefer-module': 'off',
-    },
-  },
-  sonarjs.configs.recommended,
-  {
-    rules: {
-      // sonarjs/no-nested-conditional supersedes no-nested-ternary; keeping both
-      // causes unicorn/prefer-ternary auto-fix to produce unfixable nested-ternary errors.
-      'no-nested-ternary': 'off',
-
-      // Defer to @typescript-eslint/no-unused-vars which has our custom ^_ ignore pattern.
-      // sonarjs version does not honour that pattern and double-reports the same symbol.
-      'sonarjs/no-unused-vars': 'off',
-
-      // Already enforced by no-fallthrough in js.configs.recommended.
-      'sonarjs/no-fallthrough': 'off',
-
-      // Defer to no-param-reassign which is configured with ignorePropertyModificationsFor.
-      // sonarjs version does not honour the 'self' exception.
-      'sonarjs/no-parameter-reassignment': 'off',
-
-      // Already caught by import plugin + TypeScript verbatimModuleSyntax.
-      'sonarjs/unused-import': 'off',
     },
   },
   prettier,
