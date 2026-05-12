@@ -251,6 +251,25 @@ export default [
 
       'import/no-cycle': 'error',
 
+      // Extend airbnb's no-restricted-syntax entries with barrel export prevention.
+      // ExportAllDeclaration covers `export * from '...'` — the most harmful barrel
+      // pattern: it exports everything (including internals), prevents tree-shaking,
+      // and is a common source of hidden circular dependencies.
+      // Named re-exports (`export { X } from '...'`) are left allowed — they are
+      // explicit and legitimate in published package index/entry files.
+      'no-restricted-syntax': [
+        'error',
+        // Preserve all existing airbnb entries (ForIn, ForOf, LabeledStatement, WithStatement)
+        ...airbnb.configs.style.flatMap(
+          (c) => c.rules?.['no-restricted-syntax']?.slice(1) ?? [],
+        ),
+        {
+          selector: 'ExportAllDeclaration',
+          message:
+            'Wildcard re-exports (export * from) create barrel files that prevent tree-shaking and introduce hidden circular dependencies. Re-export named symbols explicitly instead.',
+        },
+      ],
+
       'import/no-extraneous-dependencies': [
         'error',
         {
