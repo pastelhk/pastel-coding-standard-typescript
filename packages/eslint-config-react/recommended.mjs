@@ -9,6 +9,7 @@ export const recommended = [
   ...airbnb.configs.react,
   ...base.configs.recommended,
   react.configs.flat['jsx-runtime'],
+  reactHooks.configs.recommended,
   {
     languageOptions: {
       globals: {
@@ -23,10 +24,6 @@ export const recommended = [
           jsx: true,
         },
       },
-    },
-
-    plugins: {
-      'react-hooks': reactHooks,
     },
 
     settings: {
@@ -54,9 +51,6 @@ export const recommended = [
         { allow: 'as-needed', extensions: ['.tsx'] },
       ],
       'react/require-default-props': 'off',
-
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'error',
     },
   },
 ]
