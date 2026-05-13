@@ -7,10 +7,10 @@
   "main": "index.mjs",
   "prettier": "@pasteltech/prettierrc",
   "dependencies": {
-    "@next/eslint-plugin-next": "^15.5.2",
     "@pasteltech/eslint-config-react": "1.3.3"
   },
   "peerDependencies": {
-    "next": ">=15.1.0"
+    "next": ">=15.1.0",
+    "@next/eslint-plugin-next": ">=15"
   }
 }
