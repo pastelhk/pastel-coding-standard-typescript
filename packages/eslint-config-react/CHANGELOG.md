@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.4
+
+### Patch Changes
+
+- Updated dependencies [[`d0ffed4`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/d0ffed47ab7d69b08f667465e5b736fcff9f1dc0)]:
+  - @pasteltech/eslint-config-base@2.0.2
+
 ## 1.3.3
 
 ### Patch Changes

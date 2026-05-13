@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.2
+
+### Patch Changes
+
+- [`d0ffed4`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/d0ffed47ab7d69b08f667465e5b736fcff9f1dc0) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - refactor(eslint-config-base): Move @eslint/js to peer dependencies
+
 ## 2.0.1
 
 ### Patch Changes

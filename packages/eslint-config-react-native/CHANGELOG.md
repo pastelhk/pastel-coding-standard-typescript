@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @pasteltech/eslint-config-react@1.3.4
+
 ## 1.3.3
 
 ### Patch Changes

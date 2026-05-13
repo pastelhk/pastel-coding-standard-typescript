@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.3.4
+
+### Patch Changes
+
+- [`4e57f0e`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/4e57f0ed2f7e675b21a3732071b6bacdab9b568f) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - refactor(eslint-config-nextjs): Move @next/eslint-plugin-next to peer dependencies
+
+- Updated dependencies []:
+  - @pasteltech/eslint-config-react@1.3.4
+
 ## 1.3.3
 
 ### Patch Changes
