@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.5
+
+### Patch Changes
+
+- Updated dependencies [[`84d95ad`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/84d95ad487fd7e37f8b95129aeb407cc7f2eaaa6)]:
+  - @pasteltech/eslint-config-react@1.3.5
+
 ## 1.3.4
 
 ### Patch Changes
