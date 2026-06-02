@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.5
+
+### Patch Changes
+
+- [`84d95ad`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/84d95ad487fd7e37f8b95129aeb407cc7f2eaaa6) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - fix(eslint/react): use flat config on importing react hooks plugin
+
 ## 1.3.4
 
 ### Patch Changes
