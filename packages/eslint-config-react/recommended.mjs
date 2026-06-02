@@ -9,7 +9,7 @@ export const recommended = [
   ...airbnb.configs.react,
   ...base.configs.recommended,
   react.configs.flat['jsx-runtime'],
-  reactHooks.configs.recommended,
+  reactHooks.configs.flat.recommended,
   {
     languageOptions: {
       globals: {
