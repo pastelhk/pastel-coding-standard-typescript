@@ -17,6 +17,8 @@ const nextDefaultExportFilenames = [
   'unauthorized',
 ]
 
+const nextDefaultExportFileExtensions = ['ts', 'tsx', 'js', 'jsx']
+
 export const recommended = [
   {
     ...next.configs.recommended,
@@ -32,9 +34,17 @@ export const recommended = [
   {
     files: [
       // src/app/** layout for projects using the src directory
-      ...nextDefaultExportFilenames.map((it) => `src/app/**/${it}.tsx`),
+      ...nextDefaultExportFilenames.flatMap((filename) =>
+        nextDefaultExportFileExtensions.map(
+          (ext) => `src/app/**/${filename}.${ext}`,
+        ),
+      ),
       // app/** layout for projects without a src directory
-      ...nextDefaultExportFilenames.map((it) => `app/**/${it}.tsx`),
+      ...nextDefaultExportFilenames.flatMap((filename) =>
+        nextDefaultExportFileExtensions.map(
+          (ext) => `app/**/${filename}.${ext}`,
+        ),
+      ),
       '**/next.config.*',
     ],
 
