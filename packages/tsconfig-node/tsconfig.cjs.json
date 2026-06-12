@@ -4,9 +4,6 @@
     "module": "node16",
     "moduleResolution": "node16",
     // verbatimModuleSyntax is incompatible with commonjs; override to false and use isolatedModules instead
-    "verbatimModuleSyntax": false,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "verbatimModuleSyntax": false
   }
 }
