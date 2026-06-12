@@ -181,6 +181,10 @@ export const recommended = [
         'error',
         { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
       ],
+      '@typescript-eslint/consistent-type-exports': [
+        'error',
+        { fixMixedExportsWithInlineTypeSpecifier: true },
+      ],
 
       '@typescript-eslint/no-unused-vars': [
         'error',
