@@ -1,14 +1,11 @@
 {
   "extends": "@pasteltech/tsconfig-react",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "types": ["react-native"],
-    "lib": ["ES2022"],
-    "customConditions": ["react-native"],
     "jsx": "react-native",
+    "lib": ["es2023"],
 
-    "allowArbitraryExtensions": true,
+    "types": ["react-native"],
+
     "resolvePackageJsonImports": false
   }
 }
