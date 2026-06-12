@@ -1,6 +1,6 @@
 {
   "name": "@pasteltech/eslint-config-base",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Eslint config",
   "license": "MIT",
   "repository": "pasteltech/pastel-ts-coding-standard.git",
