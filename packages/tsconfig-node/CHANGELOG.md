@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.0.4
+
+### Patch Changes
+
+- [`e32441e`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/e32441e60d6ac73eb9a802b4a54bc05b292efe57) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - fix(tsconfig): centralize common module compiler options
+
+- Updated dependencies [[`4f27ce4`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/4f27ce476883cfdbb6c6cc4d295fda2cdbbe72e8), [`e32441e`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/e32441e60d6ac73eb9a802b4a54bc05b292efe57), [`3b9a97f`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/3b9a97f8d3a1b0e87371373f3f8c12b5d2b71b81), [`8494821`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/8494821534ea03e9e474605aa4cb25f2b39d7dc9), [`fd9f700`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/fd9f700fa17691404fa9f1e44ffe9d46a6b52524)]:
+  - @pasteltech/tsconfig-base@2.1.0
+
 ## 2.0.3
 
 ### Patch Changes

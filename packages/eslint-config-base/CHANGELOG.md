@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.0.3
+
+### Patch Changes
+
+- [`25ba62c`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/25ba62cd704b3c7a12d65c891300007df09313b0) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - feat(eslint): enforce consistent type exports
+
+- [`03b0a59`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/03b0a5933f367f594b1fedca154cdac277a296cb) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - feat(eslint): add dedicated type-aware config for test files
+
+- [`2108cc8`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/2108cc8dceae394a20dc4460f457f10c8e853ab1) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - feat(eslint): ignore common build and generated files
+
+- [`67ac587`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/67ac587faa221ffd27f58422a81714591eee0982) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - feat(eslint): allow type-aware linting for \*.config.ts files
+
 ## 2.0.2
 
 ### Patch Changes

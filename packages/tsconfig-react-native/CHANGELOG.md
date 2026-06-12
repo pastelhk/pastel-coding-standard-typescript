@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.3.3
+
+### Patch Changes
+
+- Updated dependencies [[`3b9a97f`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/3b9a97f8d3a1b0e87371373f3f8c12b5d2b71b81), [`2927bef`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/2927bef6158563db91e7fbc29663c27db1e6602e)]:
+  - @pasteltech/tsconfig-react@2.0.3
+
 ## 1.3.2
 
 ### Patch Changes

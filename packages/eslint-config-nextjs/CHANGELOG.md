@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.3.6
+
+### Patch Changes
+
+- [`4422d12`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/4422d124189169df38aebf235198697daa886020) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - fix(eslint/nextjs): handle non-tsx default export pages
+
+- Updated dependencies []:
+  - @pasteltech/eslint-config-react@1.3.6
+
 ## 1.3.5
 
 ### Patch Changes
