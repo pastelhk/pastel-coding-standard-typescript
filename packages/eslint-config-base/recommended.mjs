@@ -18,7 +18,7 @@ export const recommended = [
         projectService: {
           // Allow files not covered by any tsconfig (e.g. eslint.config.mjs, *.cjs)
           // to be parsed using a default project so type-aware rules still apply.
-          allowDefaultProject: ['*.js', '*.mjs', '*.cjs'],
+          allowDefaultProject: ['*.js', '*.mjs', '*.cjs', '**/*.config.ts'],
         },
       },
     },
