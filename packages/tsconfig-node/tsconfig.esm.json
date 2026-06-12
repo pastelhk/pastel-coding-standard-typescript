@@ -1,7 +1,0 @@
-{
-  "extends": "@pasteltech/tsconfig-base",
-  "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext"
-  }
-}

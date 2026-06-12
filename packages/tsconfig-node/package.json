@@ -6,8 +6,7 @@
   "repository": "pasteltech/pastel-ts-coding-standard.git",
   "exports": {
     ".": "./tsconfig.cjs.json",
-    "./tsconfig": "./tsconfig.cjs.json",
-    "./tsconfig.esm": "./tsconfig.esm.json"
+    "./tsconfig.cjs.json": "./tsconfig.cjs.json"
   },
   "main": "tsconfig.cjs.json",
   "prettier": "@pasteltech/prettierrc",
