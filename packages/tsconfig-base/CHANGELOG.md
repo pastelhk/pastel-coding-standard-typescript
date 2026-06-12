@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.0
+
+### Major Changes
+
+- [#45](https://github.com/pastelhk/pastel-ts-coding-standard/pull/45) [`ea47ca9`](https://github.com/pastelhk/pastel-ts-coding-standard/commit/ea47ca95c52c54a43eda1e06cc050625cc5756b6) Thanks [@jimmyltsinn](https://github.com/jimmyltsinn)! - feat(tsconfig): overhaul tsconfig with ESM-first setup
+
 ## 2.1.0
 
 ### Minor Changes
