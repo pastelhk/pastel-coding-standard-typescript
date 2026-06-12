@@ -8,7 +8,9 @@
     "moduleResolution": "bundler",
 
     "types": ["react-native"],
+    "customConditions": ["react-native"],
 
-    "resolvePackageJsonImports": false
+    "resolvePackageJsonImports": false,
+    "allowArbitraryExtensions": true
   }
 }
