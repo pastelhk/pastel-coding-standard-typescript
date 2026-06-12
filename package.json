@@ -1,11 +1,12 @@
 {
   "name": "@pasteltech/pastel-ts-coding-standard",
   "version": "0.1.0",
+  "private": true,
   "author": "Pastel Tech <info@pastel.com.hk>",
   "license": "MIT",
-  "repository": "pasteltech/pastel-ts-coding-standard.git",
-  "homepage": "https://github.com/pasteltech/pastel-ts-coding-standard#readme",
-  "bugs": "https://github.com/pasteltech/pastel-ts-coding-standard/issues",
+  "repository": "pastelhk/pastel-ts-coding-standard.git",
+  "homepage": "https://github.com/pastelhk/pastel-ts-coding-standard#readme",
+  "bugs": "https://github.com/pastelhk/pastel-ts-coding-standard/issues",
   "workspaces": [
     "libs/*",
     "packages/*"
