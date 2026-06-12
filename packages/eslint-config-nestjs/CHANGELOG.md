@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.4.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @pasteltech/eslint-config-node@2.0.3
+
 ## 1.4.2
 
 ### Patch Changes
