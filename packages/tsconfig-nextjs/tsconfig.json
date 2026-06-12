@@ -1,8 +1,11 @@
 {
-  "extends": "@pasteltech/tsconfig-react",
+  "extends": "@pasteltech/tsconfig-base",
   "compilerOptions": {
     "jsx": "preserve",
-    "types": [],
+    "lib": ["es2023"],
+
+    "module": "esnext",
+    "moduleResolution": "bundler",
 
     "plugins": [{ "name": "next" }]
   }
