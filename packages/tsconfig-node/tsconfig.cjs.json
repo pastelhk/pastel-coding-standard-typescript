@@ -1,8 +1,6 @@
 {
   "extends": "@pasteltech/tsconfig-base",
   "compilerOptions": {
-    "module": "CommonJS",
-    "moduleResolution": "Node16",
     "verbatimModuleSyntax": false
   }
 }
