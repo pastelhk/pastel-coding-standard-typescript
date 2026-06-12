@@ -66,6 +66,8 @@
     // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 
-    "erasableSyntaxOnly": true
+    "erasableSyntaxOnly": true,
+
+    "noUncheckedIndexedAccess": true /* Enable error reporting for accessing an index that might not exist. */
   }
 }
