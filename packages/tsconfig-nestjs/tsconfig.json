@@ -6,7 +6,6 @@
     "erasableSyntaxOnly": false,
     "useDefineForClassFields": false,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "incremental": true
+    "experimentalDecorators": true
   }
 }
