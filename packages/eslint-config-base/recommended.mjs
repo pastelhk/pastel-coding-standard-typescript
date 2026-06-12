@@ -42,8 +42,25 @@ export const recommended = [
   prettier,
   {
     ignores: [
-      '**/*.json',
       '**/dist/**',
+      '**/build/**',
+      '**/out/**',
+      '**/.next/**',
+      '**/storybook-static/**',
+
+      '**/.tshy/**',
+      '**/.tshy-build/**',
+      '**/.tshy-build-tmp/**',
+
+      '**/.turbo/**',
+      '**/coverage/**',
+      '**/.nyc_output/**',
+
+      '**/__generated__/**',
+      '**/*.generated.*',
+      '**/next-env.d.ts',
+
+      '**/*.json',
       '**/node_modules/**',
       '**/coverage/**',
       '**/vite.config.ts',
