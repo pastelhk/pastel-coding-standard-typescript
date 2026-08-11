@@ -34,7 +34,7 @@
     "@changesets/changelog-github": "^0.6.0",
     "@changesets/cli": "^2.30.0",
     "eslint-find-rules": "^5.0.0",
-    "next": "^15.5.18",
+    "next": "^15.5.23",
     "patch-package": "^8.0.1",
     "prettier": "^3.6.2",
     "syncpack": "^14.2.1",
